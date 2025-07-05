@@ -1,0 +1,235 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserRole {
+  USER
+  ADMIN
+  ARTIST
+}
+
+enum ArtistStatus {
+  ACTIVE
+  INACTIVE
+  ARCHIVED
+}
+
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  name      String?
+  role      UserRole @default(USER)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  favourites      Favourite[]
+  playlists       Playlist[]
+  library         Library[]
+  LibraryPlaylist LibraryPlaylist[]
+  LibraryArtist   LibraryArtist[]
+  LibraryAlbum    LibraryAlbum[]
+  LibrarySong     LibrarySong[]
+
+  @@index([email])
+  @@index([role])
+}
+
+model Artist {
+  id          String       @id @default(uuid())
+  name        String       @unique
+  description String?
+  group       String?
+  image       String?
+  status      ArtistStatus @default(ACTIVE)
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+
+  // Relations
+  albums         Album[]
+  songs          Song[]
+  libraryArtists LibraryArtist[]
+
+  @@index([name])
+  @@index([status])
+}
+
+model Album {
+  id          String    @id @default(uuid())
+  title       String
+  artistId    String
+  releaseDate DateTime?
+  coverImage  String?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  // Relations
+  artist        Artist         @relation(fields: [artistId], references: [id], onDelete: Cascade)
+  songs         Song[]
+  libraryAlbums LibraryAlbum[]
+
+  @@index([artistId])
+  @@index([releaseDate])
+  @@index([title])
+}
+
+model Song {
+  id            String    @id @default(uuid())
+  title         String
+  artistId      String
+  albumId       String?
+  url           String // Made required - core field for streaming
+  duration      Int? // Duration in seconds
+  lyrics        String?
+  coverImage    String?
+  releaseDate   DateTime?
+  albumPosition Int? // Order of songs in album, if applicable
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  // Relations
+  artist       Artist         @relation(fields: [artistId], references: [id], onDelete: Cascade)
+  album        Album?         @relation(fields: [albumId], references: [id], onDelete: SetNull)
+  favourites   Favourite[]
+  playlists    PlaylistSong[]
+  librarySongs LibrarySong[]
+
+  @@index([artistId])
+  @@index([albumId])
+  @@index([title])
+  @@index([releaseDate])
+}
+
+model Favourite {
+  id        String   @id @default(uuid())
+  userId    String
+  songId    String
+  createdAt DateTime @default(now())
+
+  // Relations
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  song Song @relation(fields: [songId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, songId])
+  @@index([userId])
+  @@index([songId])
+}
+
+model Playlist {
+  id        String   @id @default(uuid())
+  name      String
+  userId    String
+  isPublic  Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  user            User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+  songs           PlaylistSong[]
+  LibraryPlaylist LibraryPlaylist[]
+
+  @@index([userId])
+  @@index([isPublic])
+}
+
+model PlaylistSong {
+  id         String   @id @default(uuid())
+  playlistId String
+  songId     String
+  addedAt    DateTime @default(now())
+
+  // Relations
+  playlist Playlist @relation(fields: [playlistId], references: [id], onDelete: Cascade)
+  song     Song     @relation(fields: [songId], references: [id], onDelete: Cascade)
+
+  @@unique([playlistId, songId])
+  @@index([playlistId])
+  @@index([songId])
+}
+
+model Library {
+  id        String            @id @default(uuid())
+  user      User             @relation(fields: [userId], references: [id])
+  userId    String
+  songs     LibrarySong[]
+  albums    LibraryAlbum[]
+  artists   LibraryArtist[]
+  playlists LibraryPlaylist[]
+  
+  @@unique([userId])
+  @@index([userId])
+}
+
+// Simplified Library Structure - Direct user relations
+model LibrarySong {
+  id      String   @id @default(uuid())
+  userId  String
+  songId  String
+  addedAt DateTime @default(now())
+
+  // Relations
+  user    User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  song    Song      @relation(fields: [songId], references: [id], onDelete: Cascade)
+  Library Library[]
+
+  @@unique([userId, songId])
+  @@index([userId])
+  @@index([songId])
+}
+
+model LibraryAlbum {
+  id      String   @id @default(uuid())
+  userId  String
+  albumId String
+  addedAt DateTime @default(now())
+
+  // Relations
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  album     Album    @relation(fields: [albumId], references: [id], onDelete: Cascade)
+  Library   Library? @relation(fields: [libraryId], references: [id])
+  libraryId String?
+
+  @@unique([userId, albumId])
+  @@index([userId])
+  @@index([albumId])
+}
+
+model LibraryArtist {
+  id       String   @id @default(uuid())
+  userId   String
+  artistId String
+  addedAt  DateTime @default(now())
+
+  // Relations
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  artist    Artist   @relation(fields: [artistId], references: [id], onDelete: Cascade)
+  Library   Library? @relation(fields: [libraryId], references: [id])
+  libraryId String?
+
+  @@unique([userId, artistId])
+  @@index([userId])
+  @@index([artistId])
+}
+
+model LibraryPlaylist {
+  id         String   @id @default(uuid())
+  userId     String
+  playlistId String
+  addedAt    DateTime @default(now())
+
+  // Relations
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  playlist  Playlist @relation(fields: [playlistId], references: [id], onDelete: Cascade)
+  Library   Library? @relation(fields: [libraryId], references: [id])
+  libraryId String?
+
+  @@unique([userId, playlistId])
+  @@index([userId])
+  @@index([playlistId])
+}
