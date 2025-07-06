@@ -40,7 +40,7 @@ export class ArtistController {
     return this.artistService.fetchArtistById(artistId);
   }
 
-  @Get('name/:artistName')
+  @Get('artists/:artistName')
   async fetchArtistByName(@Param('artistName') artistName: string) {
     return this.artistService.fetchArtistByName(artistName);
   }
