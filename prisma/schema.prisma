@@ -45,6 +45,8 @@ model User {
 model Artist {
   id          String       @id @default(uuid())
   name        String       @unique
+  email       String
+  password    String
   description String?
   group       String?
   image       String?
@@ -156,13 +158,13 @@ model PlaylistSong {
 
 model Library {
   id        String            @id @default(uuid())
-  user      User             @relation(fields: [userId], references: [id])
+  user      User              @relation(fields: [userId], references: [id])
   userId    String
   songs     LibrarySong[]
   albums    LibraryAlbum[]
   artists   LibraryArtist[]
   playlists LibraryPlaylist[]
-  
+
   @@unique([userId])
   @@index([userId])
 }
