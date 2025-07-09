@@ -1,6 +1,15 @@
-import { Controller, Get, Post, Body, Patch, Param } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Patch,
+  Param,
+  Query,
+} from '@nestjs/common';
 import { ArtistService } from './artist.service';
 import { Artist } from 'generated/prisma';
+import { FetchArtistsDto } from './dto/fetch-artists.dto';
 
 @Controller('artists')
 export class ArtistController {
@@ -21,16 +30,8 @@ export class ArtistController {
 
   @Get()
   async fetchAllArtists(
-    @Param()
-    filters: {
-      search?: string;
-      skip?: string;
-      take?: string;
-      sortBy?: string;
-      sortOrder?: 'asc' | 'desc';
-      startDate?: string;
-      endDate?: string;
-    },
+    @Query()
+    filters: FetchArtistsDto,
   ) {
     return this.artistService.fetchAllArtists(filters);
   }
