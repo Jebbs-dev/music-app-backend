@@ -6,9 +6,12 @@ import {
   Patch,
   Delete,
   Param,
+  Query,
 } from '@nestjs/common';
 import { UserService } from './user.service';
 import { User } from 'generated/prisma';
+import { Public } from '../../common/decorators/public.decorator';
+import { FetchUsersDto } from './dto/fetch-users.dto';
 
 @Controller('users')
 export class UserController {
@@ -21,20 +24,13 @@ export class UserController {
 
   @Get()
   async fetchAllUsers(
-    @Param()
-    filters: {
-      search?: string;
-      skip?: string;
-      take?: string;
-      sortBy?: string;
-      sortOrder?: 'asc' | 'desc';
-      startDate?: string;
-      endDate?: string;
-    },
+    @Query()
+    filters: FetchUsersDto,
   ) {
     return this.usersService.fetchAllUsers(filters);
   }
 
+  @Public()
   @Post()
   async createUser(@Body() userData: User) {
     return this.usersService.createUser(userData);
