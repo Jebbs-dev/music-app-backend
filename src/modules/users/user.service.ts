@@ -1,10 +1,23 @@
 import { Injectable } from '@nestjs/common';
 import { PrismaService } from 'src/prisma/prisma.service';
 import { User, Prisma } from 'generated/prisma';
+import { hashPassword } from '../auth/utils/compare-password';
+import { FetchUsersDto } from './dto/fetch-users.dto';
 
 @Injectable()
 export class UserService {
   constructor(private prisma: PrismaService) {}
+
+  async createUser(data: User): Promise<User> {
+    const password = hashPassword(data.password);
+
+    return this.prisma.user.create({
+      data: {
+        ...data,
+        password,
+      },
+    });
+  }
 
   async fetchUser(userId: string): Promise<User | null> {
     const user = await this.prisma.user.findUnique({
@@ -14,21 +27,13 @@ export class UserService {
     return user;
   }
 
-  async fetchAllUsers(filters: {
-    search?: string;
-    skip?: string;
-    take?: string;
-    sortBy?: string;
-    sortOrder?: 'asc' | 'desc';
-    startDate?: string;
-    endDate?: string;
-  }): Promise<{
+  async fetchAllUsers(filters: FetchUsersDto): Promise<{
     users: User[];
-    skip: number;
-    take: number;
-    total: number;
     next: boolean;
     previous: boolean;
+    total: number;
+    page: number;
+    totalPages: number;
   }> {
     const { search, skip, take, sortBy, sortOrder, startDate, endDate } =
       filters;
@@ -42,15 +47,36 @@ export class UserService {
         where.OR = [{ name: { contains: search, mode: 'insensitive' } }];
       }
 
-      if (startDate || endDate) {
+      // Validate dates
+      let startDateObj: Date | undefined;
+      let endDateObj: Date | undefined;
+
+      if (startDate) {
+        startDateObj = new Date(startDate);
+        if (isNaN(startDateObj.getTime())) {
+          throw new Error('Invalid startDate format');
+        }
+      }
+
+      if (endDate) {
+        endDateObj = new Date(endDate);
+        if (isNaN(endDateObj.getTime())) {
+          throw new Error('Invalid endDate format');
+        }
+      }
+
+      if (startDateObj || endDateObj) {
         where.createdAt = {
-          ...(startDate && { gte: new Date(startDate) }),
-          ...(endDate && { lte: new Date(endDate) }),
+          ...(startDateObj && { gte: startDateObj }),
+          ...(endDateObj && { lte: endDateObj }),
         };
       }
 
-      const skipNumber = skip !== undefined ? parseInt(skip, 10) : 0;
-      const takeNumber = take !== undefined ? parseInt(take, 10) : 10;
+      const skipNumber = Math.max(0, skip ? parseInt(skip, 10) || 0 : 0);
+      const takeNumber = Math.min(
+        100,
+        Math.max(1, take ? parseInt(take, 10) || 10 : 10),
+      );
 
       const orderField = sortBy ?? 'createdAt';
       const orderDirection =
@@ -70,23 +96,17 @@ export class UserService {
 
       return {
         users,
-        skip: skipNumber,
-        take: takeNumber,
-        total,
         next: skipNumber + takeNumber < total,
         previous: skipNumber > 0,
+        total,
+        page: Math.floor(skipNumber / takeNumber) + 1,
+        totalPages: Math.ceil(total / takeNumber),
       };
     } catch (error) {
       throw new Error(
         error instanceof Error ? error.message : 'Unable to fetch users',
       );
     }
-  }
-
-  async createUser(data: User): Promise<User> {
-    return this.prisma.user.create({
-      data,
-    });
   }
 
   async updateUser(userId: string, data: Partial<User>): Promise<User> {
