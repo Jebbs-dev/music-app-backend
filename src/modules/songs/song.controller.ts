@@ -6,9 +6,11 @@ import {
   Patch,
   Param,
   Delete,
+  Query,
 } from '@nestjs/common';
 import { SongService } from './song.service';
 import { Song } from 'generated/prisma';
+import { FetchSongsDto } from './dto/fetch-songs.dto';
 
 @Controller('songs')
 export class SongController {
@@ -29,16 +31,8 @@ export class SongController {
 
   @Get()
   async fetchAllSongs(
-    @Param()
-    filters: {
-      search?: string;
-      skip?: string;
-      take?: string;
-      sortBy?: string;
-      sortOrder?: 'asc' | 'desc';
-      startDate?: string;
-      endDate?: string;
-    },
+    @Query()
+    filters: FetchSongsDto,
   ) {
     return this.songService.fetchAllSongs(filters);
   }
