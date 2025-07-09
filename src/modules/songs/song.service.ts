@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { PrismaService } from 'src/prisma/prisma.service';
 import { Prisma, Song } from 'generated/prisma';
+import { FetchSongsDto } from './dto/fetch-songs.dto';
 
 @Injectable()
 export class SongService {
@@ -12,21 +13,13 @@ export class SongService {
     });
   }
 
-  async fetchAllSongs(filters: {
-    search?: string;
-    skip?: string;
-    take?: string;
-    sortBy?: string;
-    sortOrder?: 'asc' | 'desc';
-    startDate?: string;
-    endDate?: string;
-  }): Promise<{
+  async fetchAllSongs(filters: FetchSongsDto): Promise<{
     songs: Song[];
-    skip: number;
-    take: number;
-    total: number;
     next: boolean;
     previous: boolean;
+    total: number;
+    page: number;
+    totalPages: number;
   }> {
     const { search, skip, take, sortBy, sortOrder, startDate, endDate } =
       filters;
@@ -35,18 +28,42 @@ export class SongService {
       const where: Prisma.SongWhereInput = {};
 
       if (search) {
-        where.OR = [{ title: { contains: search, mode: 'insensitive' } }];
+        where.OR = [
+          { title: { contains: search, mode: 'insensitive' } },
+          { artist: { name: { contains: search, mode: 'insensitive' } } },
+        ];
       }
 
-      if (startDate || endDate) {
+      // Validate dates
+      let startDateObj: Date | undefined;
+      let endDateObj: Date | undefined;
+
+      if (startDate) {
+        startDateObj = new Date(startDate);
+        if (isNaN(startDateObj.getTime())) {
+          throw new Error('Invalid startDate format');
+        }
+      }
+
+      if (endDate) {
+        endDateObj = new Date(endDate);
+        if (isNaN(endDateObj.getTime())) {
+          throw new Error('Invalid endDate format');
+        }
+      }
+
+      if (startDateObj || endDateObj) {
         where.createdAt = {
-          ...(startDate && { gte: new Date(startDate) }),
-          ...(endDate && { lte: new Date(endDate) }),
+          ...(startDateObj && { gte: startDateObj }),
+          ...(endDateObj && { lte: endDateObj }),
         };
       }
 
-      const skipNumber = skip !== undefined ? parseInt(skip, 10) : 0;
-      const takeNumber = take !== undefined ? parseInt(take, 10) : 10;
+      const skipNumber = Math.max(0, skip ? parseInt(skip, 10) || 0 : 0);
+      const takeNumber = Math.min(
+        100,
+        Math.max(1, take ? parseInt(take, 10) || 10 : 10),
+      );
 
       const orderField = sortBy ?? 'createdAt';
       const orderDirection = sortOrder === 'desc' ? 'desc' : 'asc';
@@ -57,17 +74,25 @@ export class SongService {
           skip: skipNumber,
           take: takeNumber,
           orderBy: { [orderField]: orderDirection },
+          include: {
+            artist: {
+              select: { id: true, name: true },
+            }, // Include artist info
+            album: {
+              select: { id: true, title: true }, // Include basic song info
+            },
+          },
         }),
         this.prisma.song.count({ where }),
       ]);
 
       return {
         songs,
-        skip: skipNumber,
-        take: takeNumber,
-        total,
         next: skipNumber + takeNumber < total,
         previous: skipNumber > 0,
+        total,
+        page: Math.floor(skipNumber / takeNumber) + 1,
+        totalPages: Math.ceil(total / takeNumber),
       };
     } catch (error) {
       throw new Error(
