@@ -1,14 +1,21 @@
 import { Injectable } from '@nestjs/common';
 import { PrismaService } from 'src/prisma/prisma.service';
 import { Prisma, Artist } from 'generated/prisma';
+import { hashPassword } from '../auth/utils/compare-password';
+import { FetchArtistsDto } from './dto/fetch-artists.dto';
 
 @Injectable()
 export class ArtistService {
   constructor(private prisma: PrismaService) {}
 
   async createArtist(data: Artist): Promise<Artist> {
+    const password = hashPassword(data.password);
+
     return this.prisma.artist.create({
-      data,
+      data: {
+        ...data,
+        password,
+      },
     });
   }
 
@@ -21,21 +28,13 @@ export class ArtistService {
     });
   }
 
-  async fetchAllArtists(filters: {
-    search?: string;
-    skip?: string;
-    take?: string;
-    sortBy?: string;
-    sortOrder?: 'asc' | 'desc';
-    startDate?: string;
-    endDate?: string;
-  }): Promise<{
+  async fetchAllArtists(filters: FetchArtistsDto): Promise<{
     artists: Artist[];
-    skip: number;
-    take: number;
-    total: number;
     next: boolean;
     previous: boolean;
+    total: number;
+    page: number;
+    totalPages: number;
   }> {
     const { search, skip, take, sortBy, sortOrder, startDate, endDate } =
       filters;
@@ -47,15 +46,35 @@ export class ArtistService {
         where.OR = [{ name: { contains: search, mode: 'insensitive' } }];
       }
 
-      if (startDate || endDate) {
+      let startDateObj: Date | undefined;
+      let endDateObj: Date | undefined;
+
+      if (startDate) {
+        startDateObj = new Date(startDate);
+        if (isNaN(startDateObj.getTime())) {
+          throw new Error('Invalid startDate format');
+        }
+      }
+
+      if (endDate) {
+        endDateObj = new Date(endDate);
+        if (isNaN(endDateObj.getTime())) {
+          throw new Error('Invalid endDate format');
+        }
+      }
+
+      if (startDateObj || endDateObj) {
         where.createdAt = {
-          ...(startDate && { gte: new Date(startDate) }),
-          ...(endDate && { lte: new Date(endDate) }),
+          ...(startDateObj && { gte: startDateObj }),
+          ...(endDateObj && { lte: endDateObj }),
         };
       }
 
-      const skipNumber = skip !== undefined ? parseInt(skip, 10) : 0;
-      const takeNumber = take !== undefined ? parseInt(take, 10) : 10;
+      const skipNumber = Math.max(0, skip ? parseInt(skip, 10) || 0 : 0);
+      const takeNumber = Math.min(
+        100,
+        Math.max(1, take ? parseInt(take, 10) || 10 : 10),
+      );
 
       const orderField = sortBy ?? 'createdAt';
       const orderDirection =
@@ -64,22 +83,22 @@ export class ArtistService {
       const [artists, total] = await this.prisma.$transaction([
         this.prisma.artist.findMany({
           where,
+          skip: skipNumber,
+          take: takeNumber,
           orderBy: {
             [orderField]: orderDirection,
           },
-          skip: skipNumber,
-          take: takeNumber,
         }),
         this.prisma.artist.count({ where }),
       ]);
 
       return {
         artists,
-        skip: skipNumber,
-        take: takeNumber,
-        total,
         next: skipNumber + takeNumber < total,
         previous: skipNumber > 0,
+        total,
+        page: Math.floor(skipNumber / takeNumber) + 1,
+        totalPages: Math.ceil(total / takeNumber),
       };
     } catch (error) {
       throw new Error(
