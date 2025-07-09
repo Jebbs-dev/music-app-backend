@@ -1,0 +1,188 @@
+[
+  // Albums for Dunsin Oyekan
+  {
+    "id": "album1-d1a2-b3c4-e5f6-789012345678",
+    "title": "Code Red",
+    "artistId": "d1a2b3c4-e5f6-7890-1234-567890abcdef",
+    "releaseDate": "2016-11-15T00:00:00Z",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b273code_red_cover",
+    "createdAt": "2016-11-10T00:00:00Z",
+    "updatedAt": "2016-11-10T00:00:00Z"
+  },
+  {
+    "id": "album2-d1a2-b3c4-e5f6-789012345678",
+    "title": "Kingdom Now",
+    "artistId": "d1a2b3c4-e5f6-7890-1234-567890abcdef",
+    "releaseDate": "2019-05-20T00:00:00Z",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b273kingdom_now_cover",
+    "createdAt": "2019-05-15T00:00:00Z",
+    "updatedAt": "2019-05-15T00:00:00Z"
+  },
+  {
+    "id": "album3-d1a2-b3c4-e5f6-789012345678",
+    "title": "The Gospel of The Kingdom",
+    "artistId": "d1a2b3c4-e5f6-7890-1234-567890abcdef",
+    "releaseDate": "2021-03-10T00:00:00Z",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b273gospel_kingdom_cover",
+    "createdAt": "2021-03-05T00:00:00Z",
+    "updatedAt": "2021-03-05T00:00:00Z"
+  },
+  {
+    "id": "album4-d1a2-b3c4-e5f6-789012345678",
+    "title": "The Glory Experience - Songs of Zion",
+    "artistId": "d1a2b3c4-e5f6-7890-1234-567890abcdef",
+    "releaseDate": "2023-08-25T00:00:00Z",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b273glory_experience_cover",
+    "createdAt": "2023-08-20T00:00:00Z",
+    "updatedAt": "2023-08-20T00:00:00Z"
+  },
+  // Albums for Don Moen
+  {
+    "id": "album1-d3c4-d5e6-g7h8-901234567890",
+    "title": "Worship with Don Moen",
+    "artistId": "d3c4d5e6-g7h8-9012-3456-789012cdefgh",
+    "releaseDate": "2015-03-10T00:00:00Z",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b273worship_with_don_cover",
+    "createdAt": "2015-03-05T00:00:00Z",
+    "updatedAt": "2015-03-05T00:00:00Z"
+  },
+  {
+    "id": "album2-d3c4-d5e6-g7h8-901234567890",
+    "title": "Hiding Place",
+    "artistId": "d3c4d5e6-g7h8-9012-3456-789012cdefgh",
+    "releaseDate": "2018-07-22T00:00:00Z",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b273hiding_place_cover",
+    "createdAt": "2018-07-17T00:00:00Z",
+    "updatedAt": "2018-07-17T00:00:00Z"
+  },
+  {
+    "id": "album3-d3c4-d5e6-g7h8-901234567890",
+    "title": "Eternal God",
+    "artistId": "d3c4d5e6-g7h8-9012-3456-789012cdefgh",
+    "releaseDate": "2020-12-15T00:00:00Z",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b273eternal_god_cover",
+    "createdAt": "2020-12-10T00:00:00Z",
+    "updatedAt": "2020-12-10T00:00:00Z"
+  },
+  // Albums for Maverick City Music
+  {
+    "id": "album1-m4d5-e6f7-h8i9-012345678901",
+    "title": "Maverick City Vol. 3 Part 1",
+    "artistId": "m4d5e6f7-h8i9-0123-4567-890123defghi",
+    "releaseDate": "2020-05-29T00:00:00Z",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b273maverick_city_vol3_part1",
+    "createdAt": "2020-05-24T00:00:00Z",
+    "updatedAt": "2020-05-24T00:00:00Z"
+  },
+  {
+    "id": "album2-m4d5-e6f7-h8i9-012345678901",
+    "title": "Old Church Basement",
+    "artistId": "m4d5e6f7-h8i9-0123-4567-890123defghi",
+    "releaseDate": "2021-11-05T00:00:00Z",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b273old_church_basement",
+    "createdAt": "2021-10-30T00:00:00Z",
+    "updatedAt": "2021-10-30T00:00:00Z"
+  },
+  {
+    "id": "album3-m4d5-e6f7-h8i9-012345678901",
+    "title": "Kingdom Book One",
+    "artistId": "m4d5e6f7-h8i9-0123-4567-890123defghi",
+    "releaseDate": "2022-08-19T00:00:00Z",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b273kingdom_book_one",
+    "createdAt": "2022-08-14T00:00:00Z",
+    "updatedAt": "2022-08-14T00:00:00Z"
+  },
+  // Albums for Gaither Vocal Band
+  {
+    "id": "album1-g5e6-f7g8-i9j0-123456789012",
+    "title": "Reunited",
+    "artistId": "g5e6f7g8-i9j0-1234-5678-901234efghij",
+    "releaseDate": "2009-07-07T00:00:00Z",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b273reunited_cover",
+    "createdAt": "2009-07-02T00:00:00Z",
+    "updatedAt": "2009-07-02T00:00:00Z"
+  },
+  {
+    "id": "album2-g5e6-f7g8-i9j0-123456789012",
+    "title": "Greatly Blessed",
+    "artistId": "g5e6f7g8-i9j0-1234-5678-901234efghij",
+    "releaseDate": "2010-10-05T00:00:00Z",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b273greatly_blessed_cover",
+    "createdAt": "2010-09-30T00:00:00Z",
+    "updatedAt": "2010-09-30T00:00:00Z"
+  },
+  {
+    "id": "album3-g5e6-f7g8-i9j0-123456789012",
+    "title": "Hymns",
+    "artistId": "g5e6f7g8-i9j0-1234-5678-901234efghij",
+    "releaseDate": "2014-03-04T00:00:00Z",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b273hymns_cover",
+    "createdAt": "2014-02-28T00:00:00Z",
+    "updatedAt": "2014-02-28T00:00:00Z"
+  },
+  // Albums for Hillsong Worship
+  {
+    "id": "album1-h3c4-d5e6-g7h8-901234567890",
+    "title": "Let There Be Light",
+    "artistId": "h3c4d5e6-g7h8-9012-3456-789012cdefgh",
+    "releaseDate": "2016-10-14T00:00:00Z",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b273let_there_be_light_cover",
+    "createdAt": "2016-10-10T00:00:00Z",
+    "updatedAt": "2016-10-10T00:00:00Z"
+  },
+  {
+    "id": "album2-h3c4-d5e6-g7h8-901234567890",
+    "title": "Awake",
+    "artistId": "h3c4d5e6-g7h8-9012-3456-789012cdefgh",
+    "releaseDate": "2019-04-12T00:00:00Z",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b273awake_cover",
+    "createdAt": "2019-04-08T00:00:00Z",
+    "updatedAt": "2019-04-08T00:00:00Z"
+  },
+  {
+    "id": "album3-h3c4-d5e6-g7h8-901234567890",
+    "title": "These Same Skies",
+    "artistId": "h3c4d5e6-g7h8-9012-3456-789012cdefgh",
+    "releaseDate": "2022-02-18T00:00:00Z",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b273these_same_skies_cover",
+    "createdAt": "2022-02-14T00:00:00Z",
+    "updatedAt": "2022-02-14T00:00:00Z"
+  },
+  {
+    "id": "album4-h3c4-d5e6-g7h8-901234567890",
+    "title": "Jesus Is Alive",
+    "artistId": "h3c4d5e6-g7h8-9012-3456-789012cdefgh",
+    "releaseDate": "2023-03-31T00:00:00Z",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b273jesus_is_alive_cover",
+    "createdAt": "2023-03-27T00:00:00Z",
+    "updatedAt": "2023-03-27T00:00:00Z"
+  },
+  // Albums for Nathaniel Bassey
+  {
+    "id": "album1-n2b3-c4d5-f6g7-890123456789",
+    "title": "The Names of God",
+    "artistId": "n2b3c4d5-f6g7-8901-2345-678901bcdefg",
+    "releaseDate": "2017-09-15T00:00:00Z",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b273names_of_god_cover",
+    "createdAt": "2017-09-10T00:00:00Z",
+    "updatedAt": "2017-09-10T00:00:00Z"
+  },
+  {
+    "id": "album2-n2b3-c4d5-f6g7-890123456789",
+    "title": "Jesus: The Resurrection & The Life",
+    "artistId": "n2b3c4d5-f6g7-8901-2345-678901bcdefg",
+    "releaseDate": "2020-04-10T00:00:00Z",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b273jesus_resurrection_cover",
+    "createdAt": "2020-04-05T00:00:00Z",
+    "updatedAt": "2020-04-05T00:00:00Z"
+  },
+  {
+    "id": "album3-n2b3-c4d5-f6g7-890123456789",
+    "title": "Worship Expressions",
+    "artistId": "n2b3c4d5-f6g7-8901-2345-678901bcdefg",
+    "releaseDate": "2021-11-25T00:00:00Z",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b273worship_expressions_cover",
+    "createdAt": "2021-11-20T00:00:00Z",
+    "updatedAt": "2021-11-20T00:00:00Z"
+  }
+] 
