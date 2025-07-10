@@ -45,7 +45,7 @@ model User {
 model Artist {
   id          String       @id @default(uuid())
   name        String       @unique
-  email       String
+  email       String       @unique
   password    String
   description String?
   group       String?
@@ -59,7 +59,7 @@ model Artist {
   songs          Song[]
   libraryArtists LibraryArtist[]
 
-  @@index([name])
+  @@index([name, email])
   @@index([status])
 }
 
