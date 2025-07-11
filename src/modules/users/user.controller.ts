@@ -12,6 +12,7 @@ import { UserService } from './user.service';
 import { User } from 'generated/prisma';
 import { Public } from '../../common/decorators/public.decorator';
 import { FetchUsersDto } from './dto/fetch-users.dto';
+import { hashPassword } from '../auth/utils/compare-password';
 
 @Controller('users')
 export class UserController {
@@ -22,6 +23,7 @@ export class UserController {
     return this.usersService.fetchUser(userId);
   }
 
+  @Public()
   @Get()
   async fetchAllUsers(
     @Query()
@@ -33,7 +35,9 @@ export class UserController {
   @Public()
   @Post()
   async createUser(@Body() userData: User) {
-    return this.usersService.createUser(userData);
+    const password = hashPassword(userData.password);
+
+    return this.usersService.createUser({ ...userData, password });
   }
 
   @Patch(':userId')

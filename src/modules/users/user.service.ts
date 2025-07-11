@@ -1,7 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { PrismaService } from 'src/prisma/prisma.service';
 import { User, Prisma } from 'generated/prisma';
-import { hashPassword } from '../auth/utils/compare-password';
 import { FetchUsersDto } from './dto/fetch-users.dto';
 
 @Injectable()
@@ -9,19 +8,22 @@ export class UserService {
   constructor(private prisma: PrismaService) {}
 
   async createUser(data: User): Promise<User> {
-    const password = hashPassword(data.password);
-
     return this.prisma.user.create({
-      data: {
-        ...data,
-        password,
-      },
+      data,
     });
   }
 
   async fetchUser(userId: string): Promise<User | null> {
     const user = await this.prisma.user.findUnique({
       where: { id: userId },
+    });
+
+    return user;
+  }
+
+  async fetchUserByEmail(email: string): Promise<User | null> {
+    const user = await this.prisma.user.findUnique({
+      where: { email },
     });
 
     return user;
