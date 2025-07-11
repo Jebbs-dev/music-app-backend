@@ -1,0 +1,1294 @@
+{
+  "artists": [
+    {
+      "id": "d1a2b3c4-e5f6-7890-1234-567890abcdef",
+      "name": "Dunsin Oyekan",
+      "email": "dunsin@dunsinoyekan.com",
+      "password": "$2b$10$hashed_password_example",
+      "description": "Nigerian gospel artist, worship leader, and multi-instrumentalist. A virtuoso musician and a wonder on the bass guitar, he's been playing since age 10. He's an anointed psalmist, songwriter and music producer who has reinvented worship music.",
+      "image": "https://i.scdn.co/image/ab6761610000e5eb8f7a1b2c3d4e5f6789012345",
+      "status": "ACTIVE",
+      "createdAt": "2024-01-15T10:30:00Z",
+      "updatedAt": "2025-07-09T12:00:00Z",
+      "albums": [
+        {
+          "id": "album1-d1a2-b3c4-e5f6-789012345678",
+          "title": "Code Red",
+          "artistId": "d1a2b3c4-e5f6-7890-1234-567890abcdef",
+          "releaseDate": "2016-11-15T00:00:00Z",
+          "coverImage": "https://i.scdn.co/image/ab67616d0000b273code_red_cover",
+          "createdAt": "2016-11-10T00:00:00Z",
+          "updatedAt": "2016-11-10T00:00:00Z",
+          "songs": [
+            {
+              "id": "song1-d1a2-b3c4-e5f6-789012345678",
+              "title": "Na You (You Are the One)",
+              "artistId": "d1a2b3c4-e5f6-7890-1234-567890abcdef",
+              "albumId": "album1-d1a2-b3c4-e5f6-789012345678",
+              "url": "https://music.youtube.com/watch?v=code_red_track1",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273code_red_cover",
+              "releaseDate": "2016-11-15T00:00:00Z",
+              "albumPosition": 1,
+              "createdAt": "2016-11-15T00:00:00Z",
+              "updatedAt": "2016-11-15T00:00:00Z"
+            },
+            {
+              "id": "song2-d1a2-b3c4-e5f6-789012345678",
+              "title": "Imole De (Light Has Come)",
+              "artistId": "d1a2b3c4-e5f6-7890-1234-567890abcdef",
+              "albumId": "album1-d1a2-b3c4-e5f6-789012345678",
+              "url": "https://music.youtube.com/watch?v=code_red_track2",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273code_red_cover",
+              "releaseDate": "2016-11-15T00:00:00Z",
+              "albumPosition": 2,
+              "createdAt": "2016-11-15T00:00:00Z",
+              "updatedAt": "2016-11-15T00:00:00Z"
+            },
+            {
+              "id": "song3-d1a2-b3c4-e5f6-789012345678",
+              "title": "Open Up",
+              "artistId": "d1a2b3c4-e5f6-7890-1234-567890abcdef",
+              "albumId": "album1-d1a2-b3c4-e5f6-789012345678",
+              "url": "https://music.youtube.com/watch?v=code_red_track3",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273code_red_cover",
+              "releaseDate": "2016-11-15T00:00:00Z",
+              "albumPosition": 3,
+              "createdAt": "2016-11-15T00:00:00Z",
+              "updatedAt": "2016-11-15T00:00:00Z"
+            },
+            {
+              "id": "song4-d1a2-b3c4-e5f6-789012345678",
+              "title": "Magnificent God",
+              "artistId": "d1a2b3c4-e5f6-7890-1234-567890abcdef",
+              "albumId": "album1-d1a2-b3c4-e5f6-789012345678",
+              "url": "https://music.youtube.com/watch?v=code_red_track4",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273code_red_cover",
+              "releaseDate": "2016-11-15T00:00:00Z",
+              "albumPosition": 4,
+              "createdAt": "2016-11-15T00:00:00Z",
+              "updatedAt": "2016-11-15T00:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "album2-d1a2-b3c4-e5f6-789012345678",
+          "title": "Kingdom Now",
+          "artistId": "d1a2b3c4-e5f6-7890-1234-567890abcdef",
+          "releaseDate": "2019-05-20T00:00:00Z",
+          "coverImage": "https://i.scdn.co/image/ab67616d0000b273kingdom_now_cover",
+          "createdAt": "2019-05-15T00:00:00Z",
+          "updatedAt": "2019-05-15T00:00:00Z",
+          "songs": [
+            {
+              "id": "song5-d1a2-b3c4-e5f6-789012345678",
+              "title": "Fragrance to Fire",
+              "artistId": "d1a2b3c4-e5f6-7890-1234-567890abcdef",
+              "albumId": "album2-d1a2-b3c4-e5f6-789012345678",
+              "url": "https://music.youtube.com/watch?v=kingdom_now_track1",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273kingdom_now_cover",
+              "releaseDate": "2019-05-20T00:00:00Z",
+              "albumPosition": 1,
+              "createdAt": "2019-05-20T00:00:00Z",
+              "updatedAt": "2019-05-20T00:00:00Z"
+            },
+            {
+              "id": "song6-d1a2-b3c4-e5f6-789012345678",
+              "title": "Always Win",
+              "artistId": "d1a2b3c4-e5f6-7890-1234-567890abcdef",
+              "albumId": "album2-d1a2-b3c4-e5f6-789012345678",
+              "url": "https://music.youtube.com/watch?v=kingdom_now_track2",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273kingdom_now_cover",
+              "releaseDate": "2019-05-20T00:00:00Z",
+              "albumPosition": 2,
+              "createdAt": "2019-05-20T00:00:00Z",
+              "updatedAt": "2019-05-20T00:00:00Z"
+            },
+            {
+              "id": "song7-d1a2-b3c4-e5f6-789012345678",
+              "title": "Breathe on Me",
+              "artistId": "d1a2b3c4-e5f6-7890-1234-567890abcdef",
+              "albumId": "album2-d1a2-b3c4-e5f6-789012345678",
+              "url": "https://music.youtube.com/watch?v=kingdom_now_track3",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273kingdom_now_cover",
+              "releaseDate": "2019-05-20T00:00:00Z",
+              "albumPosition": 3,
+              "createdAt": "2019-05-20T00:00:00Z",
+              "updatedAt": "2019-05-20T00:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "album3-d1a2-b3c4-e5f6-789012345678",
+          "title": "The Gospel of The Kingdom",
+          "artistId": "d1a2b3c4-e5f6-7890-1234-567890abcdef",
+          "releaseDate": "2021-03-10T00:00:00Z",
+          "coverImage": "https://i.scdn.co/image/ab67616d0000b273gospel_kingdom_cover",
+          "createdAt": "2021-03-05T00:00:00Z",
+          "updatedAt": "2021-03-05T00:00:00Z",
+          "songs": [
+            {
+              "id": "song8-d1a2-b3c4-e5f6-789012345678",
+              "title": "Worthy of My Praise",
+              "artistId": "d1a2b3c4-e5f6-7890-1234-567890abcdef",
+              "albumId": "album3-d1a2-b3c4-e5f6-789012345678",
+              "url": "https://music.youtube.com/watch?v=gospel_kingdom_track1",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273gospel_kingdom_cover",
+              "releaseDate": "2021-03-10T00:00:00Z",
+              "albumPosition": 1,
+              "createdAt": "2021-03-10T00:00:00Z",
+              "updatedAt": "2021-03-10T00:00:00Z"
+            },
+            {
+              "id": "song9-d1a2-b3c4-e5f6-789012345678",
+              "title": "Roar",
+              "artistId": "d1a2b3c4-e5f6-7890-1234-567890abcdef",
+              "albumId": "album3-d1a2-b3c4-e5f6-789012345678",
+              "url": "https://music.youtube.com/watch?v=gospel_kingdom_track2",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273gospel_kingdom_cover",
+              "releaseDate": "2021-03-10T00:00:00Z",
+              "albumPosition": 2,
+              "createdAt": "2021-03-10T00:00:00Z",
+              "updatedAt": "2021-03-10T00:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "album4-d1a2-b3c4-e5f6-789012345678",
+          "title": "The Glory Experience - Songs of Zion",
+          "artistId": "d1a2b3c4-e5f6-7890-1234-567890abcdef",
+          "releaseDate": "2023-08-25T00:00:00Z",
+          "coverImage": "https://i.scdn.co/image/ab67616d0000b273glory_experience_cover",
+          "createdAt": "2023-08-20T00:00:00Z",
+          "updatedAt": "2023-08-20T00:00:00Z",
+          "songs": [
+            {
+              "id": "song10-d1a2-b3c4-e5f6-789012345678",
+              "title": "Kadosh",
+              "artistId": "d1a2b3c4-e5f6-7890-1234-567890abcdef",
+              "albumId": "album4-d1a2-b3c4-e5f6-789012345678",
+              "url": "https://music.youtube.com/watch?v=glory_experience_track1",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273glory_experience_cover",
+              "releaseDate": "2023-08-25T00:00:00Z",
+              "albumPosition": 1,
+              "createdAt": "2023-08-25T00:00:00Z",
+              "updatedAt": "2023-08-25T00:00:00Z"
+            },
+            {
+              "id": "song11-d1a2-b3c4-e5f6-789012345678",
+              "title": "Elohim",
+              "artistId": "d1a2b3c4-e5f6-7890-1234-567890abcdef",
+              "albumId": "album4-d1a2-b3c4-e5f6-789012345678",
+              "url": "https://music.youtube.com/watch?v=glory_experience_track2",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273glory_experience_cover",
+              "releaseDate": "2023-08-25T00:00:00Z",
+              "albumPosition": 2,
+              "createdAt": "2023-08-25T00:00:00Z",
+              "updatedAt": "2023-08-25T00:00:00Z"
+            }
+          ]
+        }
+      ],
+      "singles": [
+        {
+          "id": "single1-d1a2-b3c4-e5f6-789012345678",
+          "title": "More Grace",
+          "artistId": "d1a2b3c4-e5f6-7890-1234-567890abcdef",
+          "albumId": null,
+          "url": "https://music.youtube.com/watch?v=dunsin_more_grace",
+          "coverImage": "https://i.scdn.co/image/ab67616d0000b273more_grace_single",
+          "releaseDate": "2024-01-15T00:00:00Z",
+          "albumPosition": null,
+          "createdAt": "2024-01-15T00:00:00Z",
+          "updatedAt": "2024-01-15T00:00:00Z"
+        },
+        {
+          "id": "single2-d1a2-b3c4-e5f6-789012345678",
+          "title": "Yahweh",
+          "artistId": "d1a2b3c4-e5f6-7890-1234-567890abcdef",
+          "albumId": null,
+          "url": "https://music.youtube.com/watch?v=dunsin_yahweh",
+          "coverImage": "https://i.scdn.co/image/ab67616d0000b273yahweh_single",
+          "releaseDate": "2024-03-20T00:00:00Z",
+          "albumPosition": null,
+          "createdAt": "2024-03-20T00:00:00Z",
+          "updatedAt": "2024-03-20T00:00:00Z"
+        },
+        {
+          "id": "single3-d1a2-b3c4-e5f6-789012345678",
+          "title": "Amazing God",
+          "artistId": "d1a2b3c4-e5f6-7890-1234-567890abcdef",
+          "albumId": null,
+          "url": "https://music.youtube.com/watch?v=dunsin_amazing_god",
+          "coverImage": "https://i.scdn.co/image/ab67616d0000b273amazing_god_single",
+          "releaseDate": "2024-05-10T00:00:00Z",
+          "albumPosition": null,
+          "createdAt": "2024-05-10T00:00:00Z",
+          "updatedAt": "2024-05-10T00:00:00Z"
+        },
+        {
+          "id": "single4-d1a2-b3c4-e5f6-789012345678",
+          "title": "Precious Jesus",
+          "artistId": "d1a2b3c4-e5f6-7890-1234-567890abcdef",
+          "albumId": null,
+          "url": "https://music.youtube.com/watch?v=dunsin_precious_jesus",
+          "coverImage": "https://i.scdn.co/image/ab67616d0000b273precious_jesus_single",
+          "releaseDate": "2024-07-01T00:00:00Z",
+          "albumPosition": null,
+          "createdAt": "2024-07-01T00:00:00Z",
+          "updatedAt": "2024-07-01T00:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "d3c4d5e6-g7h8-9012-3456-789012cdefgh",
+      "name": "Don Moen",
+      "email": "don@donmoen.com",
+      "password": "$2b$10$hashed_password_example3",
+      "description": "American singer, pianist, and songwriter of Christian worship music. He is a worship leader and has produced numerous albums of praise and worship music. Known for songs like 'Give Thanks', 'God Will Make a Way', and 'Our Father'.",
+      "image": "https://i.scdn.co/image/ab6761610000e5eb_don_moen",
+      "status": "ACTIVE",
+      "createdAt": "2024-03-05T08:30:00Z",
+      "updatedAt": "2025-07-09T12:00:00Z",
+      "albums": [
+        {
+          "id": "album1-d3c4-d5e6-g7h8-901234567890",
+          "title": "Worship with Don Moen",
+          "artistId": "d3c4d5e6-g7h8-9012-3456-789012cdefgh",
+          "releaseDate": "2015-03-10T00:00:00Z",
+          "coverImage": "https://i.scdn.co/image/ab67616d0000b273worship_with_don_cover",
+          "createdAt": "2015-03-05T00:00:00Z",
+          "updatedAt": "2015-03-05T00:00:00Z",
+          "songs": [
+            {
+              "id": "song1-d3c4-d5e6-g7h8-901234567890",
+              "title": "Give Thanks",
+              "artistId": "d3c4d5e6-g7h8-9012-3456-789012cdefgh",
+              "albumId": "album1-d3c4-d5e6-g7h8-901234567890",
+              "url": "https://music.youtube.com/watch?v=don_moen_give_thanks",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273worship_with_don_cover",
+              "releaseDate": "2015-03-10T00:00:00Z",
+              "albumPosition": 1,
+              "createdAt": "2015-03-10T00:00:00Z",
+              "updatedAt": "2015-03-10T00:00:00Z"
+            },
+            {
+              "id": "song2-d3c4-d5e6-g7h8-901234567890",
+              "title": "God Will Make a Way",
+              "artistId": "d3c4d5e6-g7h8-9012-3456-789012cdefgh",
+              "albumId": "album1-d3c4-d5e6-g7h8-901234567890",
+              "url": "https://music.youtube.com/watch?v=don_moen_god_will_make_way",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273worship_with_don_cover",
+              "releaseDate": "2015-03-10T00:00:00Z",
+              "albumPosition": 2,
+              "createdAt": "2015-03-10T00:00:00Z",
+              "updatedAt": "2015-03-10T00:00:00Z"
+            },
+            {
+              "id": "song3-d3c4-d5e6-g7h8-901234567890",
+              "title": "Our Father",
+              "artistId": "d3c4d5e6-g7h8-9012-3456-789012cdefgh",
+              "albumId": "album1-d3c4-d5e6-g7h8-901234567890",
+              "url": "https://music.youtube.com/watch?v=don_moen_our_father",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273worship_with_don_cover",
+              "releaseDate": "2015-03-10T00:00:00Z",
+              "albumPosition": 3,
+              "createdAt": "2015-03-10T00:00:00Z",
+              "updatedAt": "2015-03-10T00:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "album2-d3c4-d5e6-g7h8-901234567890",
+          "title": "Hiding Place",
+          "artistId": "d3c4d5e6-g7h8-9012-3456-789012cdefgh",
+          "releaseDate": "2018-07-22T00:00:00Z",
+          "coverImage": "https://i.scdn.co/image/ab67616d0000b273hiding_place_cover",
+          "createdAt": "2018-07-17T00:00:00Z",
+          "updatedAt": "2018-07-17T00:00:00Z",
+          "songs": [
+            {
+              "id": "song4-d3c4-d5e6-g7h8-901234567890",
+              "title": "Hiding Place",
+              "artistId": "d3c4d5e6-g7h8-9012-3456-789012cdefgh",
+              "albumId": "album2-d3c4-d5e6-g7h8-901234567890",
+              "url": "https://music.youtube.com/watch?v=don_moen_hiding_place",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273hiding_place_cover",
+              "releaseDate": "2018-07-22T00:00:00Z",
+              "albumPosition": 1,
+              "createdAt": "2018-07-22T00:00:00Z",
+              "updatedAt": "2018-07-22T00:00:00Z"
+            },
+            {
+              "id": "song5-d3c4-d5e6-g7h8-901234567890",
+              "title": "Thank You Lord",
+              "artistId": "d3c4d5e6-g7h8-9012-3456-789012cdefgh",
+              "albumId": "album2-d3c4-d5e6-g7h8-901234567890",
+              "url": "https://music.youtube.com/watch?v=don_moen_thank_you_lord",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273hiding_place_cover",
+              "releaseDate": "2018-07-22T00:00:00Z",
+              "albumPosition": 2,
+              "createdAt": "2018-07-22T00:00:00Z",
+              "updatedAt": "2018-07-22T00:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "album3-d3c4-d5e6-g7h8-901234567890",
+          "title": "Eternal God",
+          "artistId": "d3c4d5e6-g7h8-9012-3456-789012cdefgh",
+          "releaseDate": "2020-12-15T00:00:00Z",
+          "coverImage": "https://i.scdn.co/image/ab67616d0000b273eternal_god_cover",
+          "createdAt": "2020-12-10T00:00:00Z",
+          "updatedAt": "2020-12-10T00:00:00Z",
+          "songs": [
+            {
+              "id": "song6-d3c4-d5e6-g7h8-901234567890",
+              "title": "Eternal God",
+              "artistId": "d3c4d5e6-g7h8-9012-3456-789012cdefgh",
+              "albumId": "album3-d3c4-d5e6-g7h8-901234567890",
+              "url": "https://music.youtube.com/watch?v=don_moen_eternal_god",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273eternal_god_cover",
+              "releaseDate": "2020-12-15T00:00:00Z",
+              "albumPosition": 1,
+              "createdAt": "2020-12-15T00:00:00Z",
+              "updatedAt": "2020-12-15T00:00:00Z"
+            },
+            {
+              "id": "song7-d3c4-d5e6-g7h8-901234567890",
+              "title": "I Want to Be Where You Are",
+              "artistId": "d3c4d5e6-g7h8-9012-3456-789012cdefgh",
+              "albumId": "album3-d3c4-d5e6-g7h8-901234567890",
+              "url": "https://music.youtube.com/watch?v=don_moen_want_to_be_where_you_are",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273eternal_god_cover",
+              "releaseDate": "2020-12-15T00:00:00Z",
+              "albumPosition": 2,
+              "createdAt": "2020-12-15T00:00:00Z",
+              "updatedAt": "2020-12-15T00:00:00Z"
+            }
+          ]
+        }
+      ],
+      "singles": [
+        {
+          "id": "single1-d3c4-d5e6-g7h8-901234567890",
+          "title": "Be Magnified",
+          "artistId": "d3c4d5e6-g7h8-9012-3456-789012cdefgh",
+          "albumId": null,
+          "url": "https://music.youtube.com/watch?v=don_moen_be_magnified",
+          "coverImage": "https://i.scdn.co/image/ab67616d0000b273be_magnified_single",
+          "releaseDate": "2024-01-28T00:00:00Z",
+          "albumPosition": null,
+          "createdAt": "2024-01-28T00:00:00Z",
+          "updatedAt": "2024-01-28T00:00:00Z"
+        },
+        {
+          "id": "single2-d3c4-d5e6-g7h8-901234567890",
+          "title": "Shout to the Lord",
+          "artistId": "d3c4d5e6-g7h8-9012-3456-789012cdefgh",
+          "albumId": null,
+          "url": "https://music.youtube.com/watch?v=don_moen_shout_to_lord",
+          "coverImage": "https://i.scdn.co/image/ab67616d0000b273shout_to_lord_single",
+          "releaseDate": "2024-03-18T00:00:00Z",
+          "albumPosition": null,
+          "createdAt": "2024-03-18T00:00:00Z",
+          "updatedAt": "2024-03-18T00:00:00Z"
+        },
+        {
+          "id": "single3-d3c4-d5e6-g7h8-901234567890",
+          "title": "Blessed Be the Name",
+          "artistId": "d3c4d5e6-g7h8-9012-3456-789012cdefgh",
+          "albumId": null,
+          "url": "https://music.youtube.com/watch?v=don_moen_blessed_be_name",
+          "coverImage": "https://i.scdn.co/image/ab67616d0000b273blessed_be_name_single",
+          "releaseDate": "2024-05-22T00:00:00Z",
+          "albumPosition": null,
+          "createdAt": "2024-05-22T00:00:00Z",
+          "updatedAt": "2024-05-22T00:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "m4d5e6f7-h8i9-0123-4567-890123defghi",
+      "name": "Maverick City Music",
+      "email": "info@maverickcitymusic.com",
+      "password": "$2b$10$hashed_password_example4",
+      "description": "Contemporary Christian music collective and record label founded in 2018. The group is known for its diverse membership and contemporary worship music that blends various genres including gospel, R&B, and hip-hop.",
+      "image": "https://i.scdn.co/image/ab6761610000e5eb_maverick_city",
+      "status": "ACTIVE",
+      "createdAt": "2024-01-20T11:45:00Z",
+      "updatedAt": "2025-07-09T12:00:00Z",
+      "albums": [
+        {
+          "id": "album1-m4d5-e6f7-h8i9-012345678901",
+          "title": "Maverick City Vol. 3 Part 1",
+          "artistId": "m4d5e6f7-h8i9-0123-4567-890123defghi",
+          "releaseDate": "2020-05-29T00:00:00Z",
+          "coverImage": "https://i.scdn.co/image/ab67616d0000b273maverick_city_vol3_part1",
+          "createdAt": "2020-05-24T00:00:00Z",
+          "updatedAt": "2020-05-24T00:00:00Z",
+          "songs": [
+            {
+              "id": "song1-m4d5-e6f7-h8i9-012345678901",
+              "title": "Jireh",
+              "artistId": "m4d5e6f7-h8i9-0123-4567-890123defghi",
+              "albumId": "album1-m4d5-e6f7-h8i9-012345678901",
+              "url": "https://music.youtube.com/watch?v=maverick_city_jireh",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273maverick_city_vol3_part1",
+              "releaseDate": "2020-05-29T00:00:00Z",
+              "albumPosition": 1,
+              "createdAt": "2020-05-29T00:00:00Z",
+              "updatedAt": "2020-05-29T00:00:00Z"
+            },
+            {
+              "id": "song2-m4d5-e6f7-h8i9-012345678901",
+              "title": "Man of Your Word",
+              "artistId": "m4d5e6f7-h8i9-0123-4567-890123defghi",
+              "albumId": "album1-m4d5-e6f7-h8i9-012345678901",
+              "url": "https://music.youtube.com/watch?v=maverick_city_man_of_your_word",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273maverick_city_vol3_part1",
+              "releaseDate": "2020-05-29T00:00:00Z",
+              "albumPosition": 2,
+              "createdAt": "2020-05-29T00:00:00Z",
+              "updatedAt": "2020-05-29T00:00:00Z"
+            },
+            {
+              "id": "song3-m4d5-e6f7-h8i9-012345678901",
+              "title": "Promises",
+              "artistId": "m4d5e6f7-h8i9-0123-4567-890123defghi",
+              "albumId": "album1-m4d5-e6f7-h8i9-012345678901",
+              "url": "https://music.youtube.com/watch?v=maverick_city_promises",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273maverick_city_vol3_part1",
+              "releaseDate": "2020-05-29T00:00:00Z",
+              "albumPosition": 3,
+              "createdAt": "2020-05-29T00:00:00Z",
+              "updatedAt": "2020-05-29T00:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "album2-m4d5-e6f7-h8i9-012345678901",
+          "title": "Old Church Basement",
+          "artistId": "m4d5e6f7-h8i9-0123-4567-890123defghi",
+          "releaseDate": "2021-11-05T00:00:00Z",
+          "coverImage": "https://i.scdn.co/image/ab67616d0000b273old_church_basement",
+          "createdAt": "2021-10-30T00:00:00Z",
+          "updatedAt": "2021-10-30T00:00:00Z",
+          "songs": [
+            {
+              "id": "song4-m4d5-e6f7-h8i9-012345678901",
+              "title": "Wait on You",
+              "artistId": "m4d5e6f7-h8i9-0123-4567-890123defghi",
+              "albumId": "album2-m4d5-e6f7-h8i9-012345678901",
+              "url": "https://music.youtube.com/watch?v=maverick_city_wait_on_you",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273old_church_basement",
+              "releaseDate": "2021-11-05T00:00:00Z",
+              "albumPosition": 1,
+              "createdAt": "2021-11-05T00:00:00Z",
+              "updatedAt": "2021-11-05T00:00:00Z"
+            },
+            {
+              "id": "song5-m4d5-e6f7-h8i9-012345678901",
+              "title": "Breathe",
+              "artistId": "m4d5e6f7-h8i9-0123-4567-890123defghi",
+              "albumId": "album2-m4d5-e6f7-h8i9-012345678901",
+              "url": "https://music.youtube.com/watch?v=maverick_city_breathe",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273old_church_basement",
+              "releaseDate": "2021-11-05T00:00:00Z",
+              "albumPosition": 2,
+              "createdAt": "2021-11-05T00:00:00Z",
+              "updatedAt": "2021-11-05T00:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "album3-m4d5-e6f7-h8i9-012345678901",
+          "title": "Kingdom Book One",
+          "artistId": "m4d5e6f7-h8i9-0123-4567-890123defghi",
+          "releaseDate": "2022-08-19T00:00:00Z",
+          "coverImage": "https://i.scdn.co/image/ab67616d0000b273kingdom_book_one",
+          "createdAt": "2022-08-14T00:00:00Z",
+          "updatedAt": "2022-08-14T00:00:00Z",
+          "songs": [
+            {
+              "id": "song6-m4d5-e6f7-h8i9-012345678901",
+              "title": "Million Little Miracles",
+              "artistId": "m4d5e6f7-h8i9-0123-4567-890123defghi",
+              "albumId": "album3-m4d5-e6f7-h8i9-012345678901",
+              "url": "https://music.youtube.com/watch?v=maverick_city_million_little_miracles",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273kingdom_book_one",
+              "releaseDate": "2022-08-19T00:00:00Z",
+              "albumPosition": 1,
+              "createdAt": "2022-08-19T00:00:00Z",
+              "updatedAt": "2022-08-19T00:00:00Z"
+            },
+            {
+              "id": "song7-m4d5-e6f7-h8i9-012345678901",
+              "title": "Firm Foundation (He Won't)",
+              "artistId": "m4d5e6f7-h8i9-0123-4567-890123defghi",
+              "albumId": "album3-m4d5-e6f7-h8i9-012345678901",
+              "url": "https://music.youtube.com/watch?v=maverick_city_firm_foundation",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273kingdom_book_one",
+              "releaseDate": "2022-08-19T00:00:00Z",
+              "albumPosition": 2,
+              "createdAt": "2022-08-19T00:00:00Z",
+              "updatedAt": "2022-08-19T00:00:00Z"
+            }
+          ]
+        }
+      ],
+      "singles": [
+        {
+          "id": "single1-m4d5-e6f7-h8i9-012345678901",
+          "title": "Refiner",
+          "artistId": "m4d5e6f7-h8i9-0123-4567-890123defghi",
+          "albumId": null,
+          "url": "https://music.youtube.com/watch?v=maverick_city_refiner",
+          "coverImage": "https://i.scdn.co/image/ab67616d0000b273refiner_single",
+          "releaseDate": "2024-02-29T00:00:00Z",
+          "albumPosition": null,
+          "createdAt": "2024-02-29T00:00:00Z",
+          "updatedAt": "2024-02-29T00:00:00Z"
+        },
+        {
+          "id": "single2-m4d5-e6f7-h8i9-012345678901",
+          "title": "Communion",
+          "artistId": "m4d5e6f7-h8i9-0123-4567-890123defghi",
+          "albumId": null,
+          "url": "https://music.youtube.com/watch?v=maverick_city_communion",
+          "coverImage": "https://i.scdn.co/image/ab67616d0000b273communion_single",
+          "releaseDate": "2024-04-25T00:00:00Z",
+          "albumPosition": null,
+          "createdAt": "2024-04-25T00:00:00Z",
+          "updatedAt": "2024-04-25T00:00:00Z"
+        },
+        {
+          "id": "single3-m4d5-e6f7-h8i9-012345678901",
+          "title": "God of Wonders",
+          "artistId": "m4d5e6f7-h8i9-0123-4567-890123defghi",
+          "albumId": null,
+          "url": "https://music.youtube.com/watch?v=maverick_city_god_of_wonders",
+          "coverImage": "https://i.scdn.co/image/ab67616d0000b273god_of_wonders_single",
+          "releaseDate": "2024-06-15T00:00:00Z",
+          "albumPosition": null,
+          "createdAt": "2024-06-15T00:00:00Z",
+          "updatedAt": "2024-06-15T00:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "g5e6f7g8-i9j0-1234-5678-901234efghij",
+      "name": "Gaither Vocal Band",
+      "email": "info@gaither.com",
+      "password": "$2b$10$hashed_password_example5",
+      "description": "American southern gospel vocal group, named after its founder and leader Bill Gaither. The group has won multiple Grammy Awards and Dove Awards and is known for their harmonious vocals and inspirational songs.",
+      "image": "https://i.scdn.co/image/ab6761610000e5eb_gaither_vocal_band",
+      "status": "ACTIVE",
+      "createdAt": "2024-02-15T14:20:00Z",
+      "updatedAt": "2025-07-09T12:00:00Z",
+      "albums": [
+        {
+          "id": "album1-g5e6-f7g8-i9j0-123456789012",
+          "title": "Reunited",
+          "artistId": "g5e6f7g8-i9j0-1234-5678-901234efghij",
+          "releaseDate": "2009-07-07T00:00:00Z",
+          "coverImage": "https://i.scdn.co/image/ab67616d0000b273reunited_cover",
+          "createdAt": "2009-07-02T00:00:00Z",
+          "updatedAt": "2009-07-02T00:00:00Z",
+          "songs": [
+            {
+              "id": "song1-g5e6-f7g8-i9j0-123456789012",
+              "title": "Jesus on the Mainline",
+              "artistId": "g5e6f7g8-i9j0-1234-5678-901234efghij",
+              "albumId": "album1-g5e6-f7g8-i9j0-123456789012",
+              "url": "https://music.youtube.com/watch?v=gaither_jesus_mainline",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273reunited_cover",
+              "releaseDate": "2009-07-07T00:00:00Z",
+              "albumPosition": 1,
+              "createdAt": "2009-07-07T00:00:00Z",
+              "updatedAt": "2009-07-07T00:00:00Z"
+            },
+            {
+              "id": "song2-g5e6-f7g8-i9j0-123456789012",
+              "title": "Alpha and Omega",
+              "artistId": "g5e6f7g8-i9j0-1234-5678-901234efghij",
+              "albumId": "album1-g5e6-f7g8-i9j0-123456789012",
+              "url": "https://music.youtube.com/watch?v=gaither_alpha_omega",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273reunited_cover",
+              "releaseDate": "2009-07-07T00:00:00Z",
+              "albumPosition": 2,
+              "createdAt": "2009-07-07T00:00:00Z",
+              "updatedAt": "2009-07-07T00:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "album2-g5e6-f7g8-i9j0-123456789012",
+          "title": "Greatly Blessed",
+          "artistId": "g5e6f7g8-i9j0-1234-5678-901234efghij",
+          "releaseDate": "2010-10-05T00:00:00Z",
+          "coverImage": "https://i.scdn.co/image/ab67616d0000b273greatly_blessed_cover",
+          "createdAt": "2010-09-30T00:00:00Z",
+          "updatedAt": "2010-09-30T00:00:00Z",
+          "songs": [
+            {
+              "id": "song3-g5e6-f7g8-i9j0-123456789012",
+              "title": "Greatly Blessed",
+              "artistId": "g5e6f7g8-i9j0-1234-5678-901234efghij",
+              "albumId": "album2-g5e6-f7g8-i9j0-123456789012",
+              "url": "https://music.youtube.com/watch?v=gaither_greatly_blessed",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273greatly_blessed_cover",
+              "releaseDate": "2010-10-05T00:00:00Z",
+              "albumPosition": 1,
+              "createdAt": "2010-10-05T00:00:00Z",
+              "updatedAt": "2010-10-05T00:00:00Z"
+            },
+            {
+              "id": "song4-g5e6-f7g8-i9j0-123456789012",
+              "title": "Sometimes It Takes a Mountain",
+              "artistId": "g5e6f7g8-i9j0-1234-5678-901234efghij",
+              "albumId": "album2-g5e6-f7g8-i9j0-123456789012",
+              "url": "https://music.youtube.com/watch?v=gaither_sometimes_mountain",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273greatly_blessed_cover",
+              "releaseDate": "2010-10-05T00:00:00Z",
+              "albumPosition": 2,
+              "createdAt": "2010-10-05T00:00:00Z",
+              "updatedAt": "2010-10-05T00:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "album3-g5e6-f7g8-i9j0-123456789012",
+          "title": "Hymns",
+          "artistId": "g5e6f7g8-i9j0-1234-5678-901234efghij",
+          "releaseDate": "2014-03-04T00:00:00Z",
+          "coverImage": "https://i.s2016-11-10T00:00:00Z",
+          "updatedAt": "2016-11-10T00:00:00Z",
+          "songs": [
+            {
+              "id": "song1-d1a2-b3c4-e5f6-789012345678",
+              "title": "Na You (You Are the One)",
+              "artistId": "d1a2b3c4-e5f6-7890-1234-567890abcdef",
+              "albumId": "album1-d1a2-b3c4-e5f6-789012345678",
+              "url": "https://music.youtube.com/watch?v=code_red_track1",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273code_red_cover",
+              "releaseDate": "2016-11-15T00:00:00Z",
+              "albumPosition": 1,
+              "createdAt": "2016-11-15T00:00:00Z",
+              "updatedAt": "2016-11-15T00:00:00Z"
+            },
+            {
+              "id": "song2-d1a2-b3c4-e5f6-789012345678",
+              "title": "Imole De (Light Has Come)",
+              "artistId": "d1a2b3c4-e5f6-7890-1234-567890abcdef",
+              "albumId": "album1-d1a2-b3c4-e5f6-789012345678",
+              "url": "https://music.youtube.com/watch?v=code_red_track2",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273code_red_cover",
+              "releaseDate": "2016-11-15T00:00:00Z",
+              "albumPosition": 2,
+              "createdAt": "2016-11-15T00:00:00Z",
+              "updatedAt": "2016-11-15T00:00:00Z"
+            },
+            {
+              "id": "song3-d1a2-b3c4-e5f6-789012345678",
+              "title": "Open Up",
+              "artistId": "d1a2b3c4-e5f6-7890-1234-567890abcdef",
+              "albumId": "album1-d1a2-b3c4-e5f6-789012345678",
+              "url": "https://music.youtube.com/watch?v=code_red_track3",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273code_red_cover",
+              "releaseDate": "2016-11-15T00:00:00Z",
+              "albumPosition": 3,
+              "createdAt": "2016-11-15T00:00:00Z",
+              "updatedAt": "2016-11-15T00:00:00Z"
+            },
+            {
+              "id": "song4-d1a2-b3c4-e5f6-789012345678",
+              "title": "Magnificent God",
+              "artistId": "d1a2b3c4-e5f6-7890-1234-567890abcdef",
+              "albumId": "album1-d1a2-b3c4-e5f6-789012345678",
+              "url": "https://music.youtube.com/watch?v=code_red_track4",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273code_red_cover",
+              "releaseDate": "2016-11-15T00:00:00Z",
+              "albumPosition": 4,
+              "createdAt": "2016-11-15T00:00:00Z",
+              "updatedAt": "2016-11-15T00:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "album2-d1a2-b3c4-e5f6-789012345678",
+          "title": "Kingdom Now",
+          "artistId": "d1a2b3c4-e5f6-7890-1234-567890abcdef",
+          "releaseDate": "2019-05-20T00:00:00Z",
+          "coverImage": "https://i.scdn.co/image/ab67616d0000b273kingdom_now_cover",
+          "createdAt": "2019-05-15T00:00:00Z",
+          "updatedAt": "2019-05-15T00:00:00Z",
+          "songs": [
+            {
+              "id": "song5-d1a2-b3c4-e5f6-789012345678",
+              "title": "Fragrance to Fire",
+              "artistId": "d1a2b3c4-e5f6-7890-1234-567890abcdef",
+              "albumId": "album2-d1a2-b3c4-e5f6-789012345678",
+              "url": "https://music.youtube.com/watch?v=kingdom_now_track1",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273kingdom_now_cover",
+              "releaseDate": "2019-05-20T00:00:00Z",
+              "albumPosition": 1,
+              "createdAt": "2019-05-20T00:00:00Z",
+              "updatedAt": "2019-05-20T00:00:00Z"
+            },
+            {
+              "id": "song6-d1a2-b3c4-e5f6-789012345678",
+              "title": "Always Win",
+              "artistId": "d1a2b3c4-e5f6-7890-1234-567890abcdef",
+              "albumId": "album2-d1a2-b3c4-e5f6-789012345678",
+              "url": "https://music.youtube.com/watch?v=kingdom_now_track2",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273kingdom_now_cover",
+              "releaseDate": "2019-05-20T00:00:00Z",
+              "albumPosition": 2,
+              "createdAt": "2019-05-20T00:00:00Z",
+              "updatedAt": "2019-05-20T00:00:00Z"
+            },
+            {
+              "id": "song7-d1a2-b3c4-e5f6-789012345678",
+              "title": "Breathe on Me",
+              "artistId": "d1a2b3c4-e5f6-7890-1234-567890abcdef",
+              "albumId": "album2-d1a2-b3c4-e5f6-789012345678",
+              "url": "https://music.youtube.com/watch?v=kingdom_now_track3",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273kingdom_now_cover",
+              "releaseDate": "2019-05-20T00:00:00Z",
+              "albumPosition": 3,
+              "createdAt": "2019-05-20T00:00:00Z",
+              "updatedAt": "2019-05-20T00:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "album3-d1a2-b3c4-e5f6-789012345678",
+          "title": "The Gospel of The Kingdom",
+          "artistId": "d1a2b3c4-e5f6-7890-1234-567890abcdef",
+          "releaseDate": "2021-03-10T00:00:00Z",
+          "coverImage": "https://i.scdn.co/image/ab67616d0000b273gospel_kingdom_cover",
+          "createdAt": "2021-03-05T00:00:00Z",
+          "updatedAt": "2021-03-05T00:00:00Z",
+          "songs": [
+            {
+              "id": "song8-d1a2-b3c4-e5f6-789012345678",
+              "title": "Worthy of My Praise",
+              "artistId": "d1a2b3c4-e5f6-7890-1234-567890abcdef",
+              "albumId": "album3-d1a2-b3c4-e5f6-789012345678",
+              "url": "https://music.youtube.com/watch?v=gospel_kingdom_track1",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273gospel_kingdom_cover",
+              "releaseDate": "2021-03-10T00:00:00Z",
+              "albumPosition": 1,
+              "createdAt": "2021-03-10T00:00:00Z",
+              "updatedAt": "2021-03-10T00:00:00Z"
+            },
+            {
+              "id": "song9-d1a2-b3c4-e5f6-789012345678",
+              "title": "Roar",
+              "artistId": "d1a2b3c4-e5f6-7890-1234-567890abcdef",
+              "albumId": "album3-d1a2-b3c4-e5f6-789012345678",
+              "url": "https://music.youtube.com/watch?v=gospel_kingdom_track2",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273gospel_kingdom_cover",
+              "releaseDate": "2021-03-10T00:00:00Z",
+              "albumPosition": 2,
+              "createdAt": "2021-03-10T00:00:00Z",
+              "updatedAt": "2021-03-10T00:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "album4-d1a2-b3c4-e5f6-789012345678",
+          "title": "The Glory Experience - Songs of Zion",
+          "artistId": "d1a2b3c4-e5f6-7890-1234-567890abcdef",
+          "releaseDate": "2023-08-25T00:00:00Z",
+          "coverImage": "https://i.scdn.co/image/ab67616d0000b273glory_experience_cover",
+          "createdAt": "2023-08-20T00:00:00Z",
+          "updatedAt": "2023-08-20T00:00:00Z",
+          "songs": [
+            {
+              "id": "song10-d1a2-b3c4-e5f6-789012345678",
+              "title": "Kadosh",
+              "artistId": "d1a2b3c4-e5f6-7890-1234-567890abcdef",
+              "albumId": "album4-d1a2-b3c4-e5f6-789012345678",
+              "url": "https://music.youtube.com/watch?v=glory_experience_track1",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273glory_experience_cover",
+              "releaseDate": "2023-08-25T00:00:00Z",
+              "albumPosition": 1,
+              "createdAt": "2023-08-25T00:00:00Z",
+              "updatedAt": "2023-08-25T00:00:00Z"
+            },
+            {
+              "id": "song11-d1a2-b3c4-e5f6-789012345678",
+              "title": "Elohim",
+              "artistId": "d1a2b3c4-e5f6-7890-1234-567890abcdef",
+              "albumId": "album4-d1a2-b3c4-e5f6-789012345678",
+              "url": "https://music.youtube.com/watch?v=glory_experience_track2",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273glory_experience_cover",
+              "releaseDate": "2023-08-25T00:00:00Z",
+              "albumPosition": 2,
+              "createdAt": "2023-08-25T00:00:00Z",
+              "updatedAt": "2023-08-25T00:00:00Z"
+            }
+          ]
+        }
+      ],
+      "singles": [
+        {
+          "id": "single1-d1a2-b3c4-e5f6-789012345678",
+          "title": "More Grace",
+          "artistId": "d1a2b3c4-e5f6-7890-1234-567890abcdef",
+          "albumId": null,
+          "url": "https://music.youtube.com/watch?v=dunsin_more_grace",
+          "coverImage": "https://i.scdn.co/image/ab67616d0000b273more_grace_single",
+          "releaseDate": "2024-01-15T00:00:00Z",
+          "albumPosition": null,
+          "createdAt": "2024-01-15T00:00:00Z",
+          "updatedAt": "2024-01-15T00:00:00Z"
+        },
+        {
+          "id": "single2-d1a2-b3c4-e5f6-789012345678",
+          "title": "Yahweh",
+          "artistId": "d1a2b3c4-e5f6-7890-1234-567890abcdef",
+          "albumId": null,
+          "url": "https://music.youtube.com/watch?v=dunsin_yahweh",
+          "coverImage": "https://i.scdn.co/image/ab67616d0000b273yahweh_single",
+          "releaseDate": "2024-03-20T00:00:00Z",
+          "albumPosition": null,
+          "createdAt": "2024-03-20T00:00:00Z",
+          "updatedAt": "2024-03-20T00:00:00Z"
+        },
+        {
+          "id": "single3-d1a2-b3c4-e5f6-789012345678",
+          "title": "Amazing God",
+          "artistId": "d1a2b3c4-e5f6-7890-1234-567890abcdef",
+          "albumId": null,
+          "url": "https://music.youtube.com/watch?v=dunsin_amazing_god",
+          "coverImage": "https://i.scdn.co/image/ab67616d0000b273amazing_god_single",
+          "releaseDate": "2024-05-10T00:00:00Z",
+          "albumPosition": null,
+          "createdAt": "2024-05-10T00:00:00Z",
+          "updatedAt": "2024-05-10T00:00:00Z"
+        },
+        {
+          "id": "single4-d1a2-b3c4-e5f6-789012345678",
+          "title": "Precious Jesus",
+          "artistId": "d1a2b3c4-e5f6-7890-1234-567890abcdef",
+          "albumId": null,
+          "url": "https://music.youtube.com/watch?v=dunsin_precious_jesus",
+          "coverImage": "https://i.scdn.co/image/ab67616d0000b273precious_jesus_single",
+          "releaseDate": "2024-07-01T00:00:00Z",
+          "albumPosition": null,
+          "createdAt": "2024-07-01T00:00:00Z",
+          "updatedAt": "2024-07-01T00:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "h3c4d5e6-g7h8-9012-3456-789012cdefgh",
+      "name": "Hillsong Worship",
+      "email": "worship@hillsong.com",
+      "password": "$2b$10$hashed_password_example3",
+      "description": "Hillsong Worship is a contemporary Christian music praise and worship group from Sydney, Australia. They started as a part of Hillsong Church and have become one of the most influential worship movements worldwide, known for songs like 'What a Beautiful Name' and 'Oceans'.",
+      "image": "https://i.scdn.co/image/ab6761610000e5eb_hillsong_worship",
+      "status": "ACTIVE",
+      "createdAt": "2024-03-01T08:00:00Z",
+      "updatedAt": "2025-07-09T12:00:00Z",
+      "albums": [
+        {
+          "id": "album1-h3c4-d5e6-g7h8-901234567890",
+          "title": "Let There Be Light",
+          "artistId": "h3c4d5e6-g7h8-9012-3456-789012cdefgh",
+          "releaseDate": "2016-10-14T00:00:00Z",
+          "coverImage": "https://i.scdn.co/image/ab67616d0000b273let_there_be_light_cover",
+          "createdAt": "2016-10-10T00:00:00Z",
+          "updatedAt": "2016-10-10T00:00:00Z",
+          "songs": [
+            {
+              "id": "song1-h3c4-d5e6-g7h8-901234567890",
+              "title": "What a Beautiful Name",
+              "artistId": "h3c4d5e6-g7h8-9012-3456-789012cdefgh",
+              "albumId": "album1-h3c4-d5e6-g7h8-901234567890",
+              "url": "https://music.youtube.com/watch?v=hillsong_what_beautiful_name",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273let_there_be_light_cover",
+              "releaseDate": "2016-10-14T00:00:00Z",
+              "albumPosition": 1,
+              "createdAt": "2016-10-14T00:00:00Z",
+              "updatedAt": "2016-10-14T00:00:00Z"
+            },
+            {
+              "id": "song2-h3c4-d5e6-g7h8-901234567890",
+              "title": "O Praise the Name (Anástasis)",
+              "artistId": "h3c4d5e6-g7h8-9012-3456-789012cdefgh",
+              "albumId": "album1-h3c4-d5e6-g7h8-901234567890",
+              "url": "https://music.youtube.com/watch?v=hillsong_o_praise_name",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273let_there_be_light_cover",
+              "releaseDate": "2016-10-14T00:00:00Z",
+              "albumPosition": 2,
+              "createdAt": "2016-10-14T00:00:00Z",
+              "updatedAt": "2016-10-14T00:00:00Z"
+            },
+            {
+              "id": "song3-h3c4-d5e6-g7h8-901234567890",
+              "title": "Behold (Then Sings My Soul)",
+              "artistId": "h3c4d5e6-g7h8-9012-3456-789012cdefgh",
+              "albumId": "album1-h3c4-d5e6-g7h8-901234567890",
+              "url": "https://music.youtube.com/watch?v=hillsong_behold_then_sings",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273let_there_be_light_cover",
+              "releaseDate": "2016-10-14T00:00:00Z",
+              "albumPosition": 3,
+              "createdAt": "2016-10-14T00:00:00Z",
+              "updatedAt": "2016-10-14T00:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "album2-h3c4-d5e6-g7h8-901234567890",
+          "title": "Awake",
+          "artistId": "h3c4d5e6-g7h8-9012-3456-789012cdefgh",
+          "releaseDate": "2019-04-12T00:00:00Z",
+          "coverImage": "https://i.scdn.co/image/ab67616d0000b273awake_cover",
+          "createdAt": "2019-04-08T00:00:00Z",
+          "updatedAt": "2019-04-08T00:00:00Z",
+          "songs": [
+            {
+              "id": "song4-h3c4-d5e6-g7h8-901234567890",
+              "title": "King of Kings",
+              "artistId": "h3c4d5e6-g7h8-9012-3456-789012cdefgh",
+              "albumId": "album2-h3c4-d5e6-g7h8-901234567890",
+              "url": "https://music.youtube.com/watch?v=hillsong_king_of_kings",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273awake_cover",
+              "releaseDate": "2019-04-12T00:00:00Z",
+              "albumPosition": 1,
+              "createdAt": "2019-04-12T00:00:00Z",
+              "updatedAt": "2019-04-12T00:00:00Z"
+            },
+            {
+              "id": "song5-h3c4-d5e6-g7h8-901234567890",
+              "title": "Awake My Soul",
+              "artistId": "h3c4d5e6-g7h8-9012-3456-789012cdefgh",
+              "albumId": "album2-h3c4-d5e6-g7h8-901234567890",
+              "url": "https://music.youtube.com/watch?v=hillsong_awake_my_soul",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273awake_cover",
+              "releaseDate": "2019-04-12T00:00:00Z",
+              "albumPosition": 2,
+              "createdAt": "2019-04-12T00:00:00Z",
+              "updatedAt": "2019-04-12T00:00:00Z"
+            },
+            {
+              "id": "song6-h3c4-d5e6-g7h8-901234567890",
+              "title": "New Wine",
+              "artistId": "h3c4d5e6-g7h8-9012-3456-789012cdefgh",
+              "albumId": "album2-h3c4-d5e6-g7h8-901234567890",
+              "url": "https://music.youtube.com/watch?v=hillsong_new_wine",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273awake_cover",
+              "releaseDate": "2019-04-12T00:00:00Z",
+              "albumPosition": 3,
+              "createdAt": "2019-04-12T00:00:00Z",
+              "updatedAt": "2019-04-12T00:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "album3-h3c4-d5e6-g7h8-901234567890",
+          "title": "These Same Skies",
+          "artistId": "h3c4d5e6-g7h8-9012-3456-789012cdefgh",
+          "releaseDate": "2022-02-18T00:00:00Z",
+          "coverImage": "https://i.scdn.co/image/ab67616d0000b273these_same_skies_cover",
+          "createdAt": "2022-02-14T00:00:00Z",
+          "updatedAt": "2022-02-14T00:00:00Z",
+          "songs": [
+            {
+              "id": "song7-h3c4-d5e6-g7h8-901234567890",
+              "title": "Highlands (Song of Ascent)",
+              "artistId": "h3c4d5e6-g7h8-9012-3456-789012cdefgh",
+              "albumId": "album3-h3c4-d5e6-g7h8-901234567890",
+              "url": "https://music.youtube.com/watch?v=hillsong_highlands",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273these_same_skies_cover",
+              "releaseDate": "2022-02-18T00:00:00Z",
+              "albumPosition": 1,
+              "createdAt": "2022-02-18T00:00:00Z",
+              "updatedAt": "2022-02-18T00:00:00Z"
+            },
+            {
+              "id": "song8-h3c4-d5e6-g7h8-901234567890",
+              "title": "Hope of the World",
+              "artistId": "h3c4d5e6-g7h8-9012-3456-789012cdefgh",
+              "albumId": "album3-h3c4-d5e6-g7h8-901234567890",
+              "url": "https://music.youtube.com/watch?v=hillsong_hope_of_world",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273these_same_skies_cover",
+              "releaseDate": "2022-02-18T00:00:00Z",
+              "albumPosition": 2,
+              "createdAt": "2022-02-18T00:00:00Z",
+              "updatedAt": "2022-02-18T00:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "album4-h3c4-d5e6-g7h8-901234567890",
+          "title": "Jesus Is Alive",
+          "artistId": "h3c4d5e6-g7h8-9012-3456-789012cdefgh",
+          "releaseDate": "2023-03-31T00:00:00Z",
+          "coverImage": "https://i.scdn.co/image/ab67616d0000b273jesus_is_alive_cover",
+          "createdAt": "2023-03-27T00:00:00Z",
+          "updatedAt": "2023-03-27T00:00:00Z",
+          "songs": [
+            {
+              "id": "song9-h3c4-d5e6-g7h8-901234567890",
+              "title": "Jesus Is Alive",
+              "artistId": "h3c4d5e6-g7h8-9012-3456-789012cdefgh",
+              "albumId": "album4-h3c4-d5e6-g7h8-901234567890",
+              "url": "https://music.youtube.com/watch?v=hillsong_jesus_is_alive",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273jesus_is_alive_cover",
+              "releaseDate": "2023-03-31T00:00:00Z",
+              "albumPosition": 1,
+              "createdAt": "2023-03-31T00:00:00Z",
+              "updatedAt": "2023-03-31T00:00:00Z"
+            },
+            {
+              "id": "song10-h3c4-d5e6-g7h8-901234567890",
+              "title": "Alive",
+              "artistId": "h3c4d5e6-g7h8-9012-3456-789012cdefgh",
+              "albumId": "album4-h3c4-d5e6-g7h8-901234567890",
+              "url": "https://music.youtube.com/watch?v=hillsong_alive",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273jesus_is_alive_cover",
+              "releaseDate": "2023-03-31T00:00:00Z",
+              "albumPosition": 2,
+              "createdAt": "2023-03-31T00:00:00Z",
+              "updatedAt": "2023-03-31T00:00:00Z"
+            }
+          ]
+        }
+      ],
+      "singles": [
+        {
+          "id": "single1-h3c4-d5e6-g7h8-901234567890",
+          "title": "Oceans (Where Feet May Fail)",
+          "artistId": "h3c4d5e6-g7h8-9012-3456-789012cdefgh",
+          "albumId": null,
+          "url": "https://music.youtube.com/watch?v=hillsong_oceans",
+          "coverImage": "https://i.scdn.co/image/ab67616d0000b273oceans_single",
+          "releaseDate": "2013-08-23T00:00:00Z",
+          "albumPosition": null,
+          "createdAt": "2013-08-23T00:00:00Z",
+          "updatedAt": "2013-08-23T00:00:00Z"
+        },
+        {
+          "id": "single2-h3c4-d5e6-g7h8-901234567890",
+          "title": "Cornerstone",
+          "artistId": "h3c4d5e6-g7h8-9012-3456-789012cdefgh",
+          "albumId": null,
+          "url": "https://music.youtube.com/watch?v=hillsong_cornerstone",
+          "coverImage": "https://i.scdn.co/image/ab67616d0000b273cornerstone_single",
+          "releaseDate": "2012-06-15T00:00:00Z",
+          "albumPosition": null,
+          "createdAt": "2012-06-15T00:00:00Z",
+          "updatedAt": "2012-06-15T00:00:00Z"
+        },
+        {
+          "id": "single3-h3c4-d5e6-g7h8-901234567890",
+          "title": "So Will I (100 Billion X)",
+          "artistId": "h3c4d5e6-g7h8-9012-3456-789012cdefgh",
+          "albumId": null,
+          "url": "https://music.youtube.com/watch?v=hillsong_so_will_i",
+          "coverImage": "https://i.scdn.co/image/ab67616d0000b273so_will_i_single",
+          "releaseDate": "2017-04-07T00:00:00Z",
+          "albumPosition": null,
+          "createdAt": "2017-04-07T00:00:00Z",
+          "updatedAt": "2017-04-07T00:00:00Z"
+        },
+        {
+          "id": "single4-h3c4-d5e6-g7h8-901234567890",
+          "title": "Who You Say I Am",
+          "artistId": "h3c4d5e6-g7h8-9012-3456-789012cdefgh",
+          "albumId": null,
+          "url": "https://music.youtube.com/watch?v=hillsong_who_you_say_i_am",
+          "coverImage": "https://i.scdn.co/image/ab67616d0000b273who_you_say_i_am_single",
+          "releaseDate": "2018-01-26T00:00:00Z",
+          "albumPosition": null,
+          "createdAt": "2018-01-26T00:00:00Z",
+          "updatedAt": "2018-01-26T00:00:00Z"
+        },
+        {
+          "id": "single5-h3c4-d5e6-g7h8-901234567890",
+          "title": "Goodness of God",
+          "artistId": "h3c4d5e6-g7h8-9012-3456-789012cdefgh",
+          "albumId": null,
+          "url": "https://music.youtube.com/watch?v=hillsong_goodness_of_god",
+          "coverImage": "https://i.scdn.co/image/ab67616d0000b273goodness_of_god_single",
+          "releaseDate": "2019-09-06T00:00:00Z",
+          "albumPosition": null,
+          "createdAt": "2019-09-06T00:00:00Z",
+          "updatedAt": "2019-09-06T00:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "n2b3c4d5-f6g7-8901-2345-678901bcdefg",
+      "name": "Nathaniel Bassey",
+      "email": "nathaniel@nathanielbassey.com",
+      "password": "$2b$10$hashed_password_example2",
+      "description": "Nigerian singer, pastor, trumpeter and gospel songwriter popularly known for his songs 'Imela', 'Onise Iyanu', and 'Olowogbogboro'. His music spans across different genres such as jazz, worship, hymns and medley.",
+      "image": "https://i.scdn.co/image/ab6761610000e5eb_nathaniel_bassey",
+      "status": "ACTIVE",
+      "createdAt": "2024-02-10T09:15:00Z",
+      "updatedAt": "2025-07-09T12:00:00Z",
+      "albums": [
+        {
+          "id": "album1-n2b3-c4d5-f6g7-890123456789",
+          "title": "The Names of God",
+          "artistId": "n2b3c4d5-f6g7-8901-2345-678901bcdefg",
+          "releaseDate": "2017-09-15T00:00:00Z",
+          "coverImage": "https://i.scdn.co/image/ab67616d0000b273names_of_god_cover",
+          "createdAt": "2017-09-10T00:00:00Z",
+          "updatedAt": "2017-09-10T00:00:00Z",
+          "songs": [
+            {
+              "id": "song1-n2b3-c4d5-f6g7-890123456789",
+              "title": "Imela",
+              "artistId": "n2b3c4d5-f6g7-8901-2345-678901bcdefg",
+              "albumId": "album1-n2b3-c4d5-f6g7-890123456789",
+              "url": "https://music.youtube.com/watch?v=nathaniel_imela",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273names_of_god_cover",
+              "releaseDate": "2017-09-15T00:00:00Z",
+              "albumPosition": 1,
+              "createdAt": "2017-09-15T00:00:00Z",
+              "updatedAt": "2017-09-15T00:00:00Z"
+            },
+            {
+              "id": "song2-n2b3-c4d5-f6g7-890123456789",
+              "title": "Onise Iyanu",
+              "artistId": "n2b3c4d5-f6g7-8901-2345-678901bcdefg",
+              "albumId": "album1-n2b3-c4d5-f6g7-890123456789",
+              "url": "https://music.youtube.com/watch?v=nathaniel_onise_iyanu",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273names_of_god_cover",
+              "releaseDate": "2017-09-15T00:00:00Z",
+              "albumPosition": 2,
+              "createdAt": "2017-09-15T00:00:00Z",
+              "updatedAt": "2017-09-15T00:00:00Z"
+            },
+            {
+              "id": "song3-n2b3-c4d5-f6g7-890123456789",
+              "title": "Olowogbogboro",
+              "artistId": "n2b3c4d5-f6g7-8901-2345-678901bcdefg",
+              "albumId": "album1-n2b3-c4d5-f6g7-890123456789",
+              "url": "https://music.youtube.com/watch?v=nathaniel_olowogbogboro",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273names_of_god_cover",
+              "releaseDate": "2017-09-15T00:00:00Z",
+              "albumPosition": 3,
+              "createdAt": "2017-09-15T00:00:00Z",
+              "updatedAt": "2017-09-15T00:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "album2-n2b3-c4d5-f6g7-890123456789",
+          "title": "Jesus: The Resurrection & The Life",
+          "artistId": "n2b3c4d5-f6g7-8901-2345-678901bcdefg",
+          "releaseDate": "2020-04-10T00:00:00Z",
+          "coverImage": "https://i.scdn.co/image/ab67616d0000b273jesus_resurrection_cover",
+          "createdAt": "2020-04-05T00:00:00Z",
+          "updatedAt": "2020-04-05T00:00:00Z",
+          "songs": [
+            {
+              "id": "song4-n2b3-c4d5-f6g7-890123456789",
+              "title": "Olorun to Tobi to",
+              "artistId": "n2b3c4d5-f6g7-8901-2345-678901bcdefg",
+              "albumId": "album2-n2b3-c4d5-f6g7-890123456789",
+              "url": "https://music.youtube.com/watch?v=nathaniel_olorun_to_tobi",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273jesus_resurrection_cover",
+              "releaseDate": "2020-04-10T00:00:00Z",
+              "albumPosition": 1,
+              "createdAt": "2020-04-10T00:00:00Z",
+              "updatedAt": "2020-04-10T00:00:00Z"
+            },
+            {
+              "id": "song5-n2b3-c4d5-f6g7-890123456789",
+              "title": "Hallelujah Challenge Anthem",
+              "artistId": "n2b3c4d5-f6g7-8901-2345-678901bcdefg",
+              "albumId": "album2-n2b3-c4d5-f6g7-890123456789",
+              "url": "https://music.youtube.com/watch?v=nathaniel_hallelujah_challenge",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273jesus_resurrection_cover",
+              "releaseDate": "2020-04-10T00:00:00Z",
+              "albumPosition": 2,
+              "createdAt": "2020-04-10T00:00:00Z",
+              "updatedAt": "2020-04-10T00:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "album3-n2b3-c4d5-f6g7-890123456789",
+          "title": "Worship Expressions",
+          "artistId": "n2b3c4d5-f6g7-8901-2345-678901bcdefg",
+          "releaseDate": "2021-11-25T00:00:00Z",
+          "coverImage": "https://i.scdn.co/image/ab67616d0000b273worship_expressions_cover",
+          "createdAt": "2021-11-20T00:00:00Z",
+          "updatedAt": "2021-11-20T00:00:00Z",
+          "songs": [
+            {
+              "id": "song6-n2b3-c4d5-f6g7-890123456789",
+              "title": "See What The Lord Has Done",
+              "artistId": "n2b3c4d5-f6g7-8901-2345-678901bcdefg",
+              "albumId": "album3-n2b3-c4d5-f6g7-890123456789",
+              "url": "https://music.youtube.com/watch?v=nathaniel_see_what_lord_done",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273worship_expressions_cover",
+              "releaseDate": "2021-11-25T00:00:00Z",
+              "albumPosition": 1,
+              "createdAt": "2021-11-25T00:00:00Z",
+              "updatedAt": "2021-11-25T00:00:00Z"
+            },
+            {
+              "id": "song7-n2b3-c4d5-f6g7-890123456789",
+              "title": "Alagbada Ina",
+              "artistId": "n2b3c4d5-f6g7-8901-2345-678901bcdefg",
+              "albumId": "album3-n2b3-c4d5-f6g7-890123456789",
+              "url": "https://music.youtube.com/watch?v=nathaniel_alagbada_ina",
+              "coverImage": "https://i.scdn.co/image/ab67616d0000b273worship_expressions_cover",
+              "releaseDate": "2021-11-25T00:00:00Z",
+              "albumPosition": 2,
+              "createdAt": "2021-11-25T00:00:00Z",
+              "updatedAt": "2021-11-25T00:00:00Z"
+            }
+          ]
+        }
+      ],
+      "singles": [
+        {
+          "id": "single1-n2b3-c4d5-f6g7-890123456789",
+          "title": "Abba Father",
+          "artistId": "n2b3c4d5-f6g7-8901-2345-678901bcdefg",
+          "albumId": null,
+          "url": "https://music.youtube.com/watch?v=nathaniel_abba_father",
+          "coverImage": "https://i.scdn.co/image/ab67616d0000b273abba_father_single",
+          "releaseDate": "2024-02-14T00:00:00Z",
+          "albumPosition": null,
+          "createdAt": "2024-02-14T00:00:00Z",
+          "updatedAt": "2024-02-14T00:00:00Z"
+        },
+        {
+          "id": "single2-n2b3-c4d5-f6g7-890123456789",
+          "title": "Wonderful Wonder",
+          "artistId": "n2b3c4d5-f6g7-8901-2345-678901bcdefg",
+          "albumId": null,
+          "url": "https://music.youtube.com/watch?v=nathaniel_wonderful_wonder",
+          "coverImage": "https://i.scdn.co/image/ab67616d0000b273wonderful_wonder_single",
+          "releaseDate": "2024-04-12T00:00:00Z",
+          "albumPosition": null,
+          "createdAt": "2024-04-12T00:00:00Z",
+          "updatedAt": "2024-04-12T00:00:00Z"
+        },
+        {
+          "id": "single3-n2b3-c4d5-f6g7-890123456789",
+          "title": "Jehovah Nissi",
+          "artistId": "n2b3c4d5-f6g7-8901-2345-678901bcdefg",
+          "albumId": null,
+          "url": "https://music.youtube.com/watch?v=nathaniel_jehovah_nissi",
+          "coverImage": "https://i.scdn.co/image/ab67616d0000b273jehovah_nissi_single",
+          "releaseDate": "2024-06-05T00:00:00Z",
+          "albumPosition": null,
+          "createdAt": "2024-04-12T00:00:00Z",
+          "updatedAt": "2024-04-12T00:00:00Z"
+        }
+      ]
+    }
+  ]
+}

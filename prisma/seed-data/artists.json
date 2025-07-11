@@ -1,0 +1,68 @@
+[
+  {
+    "id": "b1a2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d",
+    "name": "Dunsin Oyekan",
+    "email": "dunsin@dunsinoyekan.com",
+    "password": "$2b$10$hashed_password_example",
+    "description": "Nigerian gospel artist, worship leader, and multi-instrumentalist. A virtuoso musician and a wonder on the bass guitar, he's been playing since age 10. He's an anointed psalmist, songwriter and music producer who has reinvented worship music.",
+    "image": "https://i.scdn.co/image/ab6761610000e5eb8f7a1b2c3d4e5f6789012345",
+    "status": "ACTIVE",
+    "createdAt": "2024-01-15T10:30:00Z",
+    "updatedAt": "2025-07-09T12:00:00Z"
+  },
+  {
+    "id": "c2b3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d6e",
+    "name": "Don Moen",
+    "email": "don@donmoen.com",
+    "password": "$2b$10$hashed_password_example3",
+    "description": "American singer, pianist, and songwriter of Christian worship music. He is a worship leader and has produced numerous albums of praise and worship music. Known for songs like 'Give Thanks', 'God Will Make a Way', and 'Our Father'.",
+    "image": "https://i.scdn.co/image/ab6761610000e5eb_don_moen",
+    "status": "ACTIVE",
+    "createdAt": "2024-03-05T08:30:00Z",
+    "updatedAt": "2025-07-09T12:00:00Z"
+  },
+  {
+    "id": "d3c4e5f6-a7b8-4c9d-0e1f-2a3b4c5d6e7f",
+    "name": "Maverick City Music",
+    "email": "info@maverickcitymusic.com",
+    "password": "$2b$10$hashed_password_example4",
+    "description": "Contemporary Christian music collective and record label founded in 2018. The group is known for its diverse membership and contemporary worship music that blends various genres including gospel, R&B, and hip-hop.",
+    "image": "https://i.scdn.co/image/ab6761610000e5eb_maverick_city",
+    "status": "ACTIVE",
+    "createdAt": "2024-01-20T11:45:00Z",
+    "updatedAt": "2025-07-09T12:00:00Z"
+  },
+  {
+    "id": "e4d5f6a7-b8c9-4d0e-1f2a-3b4c5d6e7f8a",
+    "name": "Gaither Vocal Band",
+    "email": "info@gaither.com",
+    "password": "$2b$10$hashed_password_example5",
+    "description": "American southern gospel vocal group, named after its founder and leader Bill Gaither. The group has won multiple Grammy Awards and Dove Awards and is known for their harmonious vocals and inspirational songs.",
+    "image": "https://i.scdn.co/image/ab6761610000e5eb_gaither_vocal_band",
+    "status": "ACTIVE",
+    "createdAt": "2024-02-15T14:20:00Z",
+    "updatedAt": "2025-07-09T12:00:00Z"
+  },
+  {
+    "id": "f5e6a7b8-c9d0-4e1f-2a3b-4c5d6e7f8a9b",
+    "name": "Hillsong Worship",
+    "email": "worship@hillsong.com",
+    "password": "$2b$10$hashed_password_example3",
+    "description": "Hillsong Worship is a contemporary Christian music praise and worship group from Sydney, Australia. They started as a part of Hillsong Church and have become one of the most influential worship movements worldwide, known for songs like 'What a Beautiful Name' and 'Oceans'.",
+    "image": "https://i.scdn.co/image/ab6761610000e5eb_hillsong_worship",
+    "status": "ACTIVE",
+    "createdAt": "2024-03-01T08:00:00Z",
+    "updatedAt": "2025-07-09T12:00:00Z"
+  },
+  {
+    "id": "a6b7c8d9-e0f1-4a2b-3c4d-5e6f7a8b9c0d",
+    "name": "Nathaniel Bassey",
+    "email": "nathaniel@nathanielbassey.com",
+    "password": "$2b$10$hashed_password_example2",
+    "description": "Nigerian singer, pastor, trumpeter and gospel songwriter popularly known for his songs 'Imela', 'Onise Iyanu', and 'Olowogbogboro'. His music spans across different genres such as jazz, worship, hymns and medley.",
+    "image": "https://i.scdn.co/image/ab6761610000e5eb_nathaniel_bassey",
+    "status": "ACTIVE",
+    "createdAt": "2024-02-10T09:15:00Z",
+    "updatedAt": "2025-07-09T12:00:00Z"
+  }
+] 
