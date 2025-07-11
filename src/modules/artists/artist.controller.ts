@@ -10,14 +10,19 @@ import {
 import { ArtistService } from './artist.service';
 import { Artist } from 'generated/prisma';
 import { FetchArtistsDto } from './dto/fetch-artists.dto';
+import { Public } from '../../common/decorators/public.decorator';
+import { hashPassword } from '../auth/utils/compare-password';
 
 @Controller('artists')
 export class ArtistController {
   constructor(private readonly artistService: ArtistService) {}
 
+  @Public()
   @Post()
   async createArtist(@Body() artistData: Artist) {
-    return this.artistService.createArtist(artistData);
+    const password = hashPassword(artistData.password);
+
+    return this.artistService.createArtist({ ...artistData, password });
   }
 
   @Patch(':artistId')
@@ -28,6 +33,7 @@ export class ArtistController {
     return this.artistService.updateArtist(artistId, artistData);
   }
 
+  @Public()
   @Get()
   async fetchAllArtists(
     @Query()
@@ -41,7 +47,7 @@ export class ArtistController {
     return this.artistService.fetchArtistById(artistId);
   }
 
-  @Get('artists/:artistName')
+  @Get(':artistName')
   async fetchArtistByName(@Param('artistName') artistName: string) {
     return this.artistService.fetchArtistByName(artistName);
   }

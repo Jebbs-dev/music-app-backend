@@ -1,7 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { PrismaService } from 'src/prisma/prisma.service';
 import { Prisma, Artist } from 'generated/prisma';
-import { hashPassword } from '../auth/utils/compare-password';
 import { FetchArtistsDto } from './dto/fetch-artists.dto';
 
 @Injectable()
@@ -9,13 +8,8 @@ export class ArtistService {
   constructor(private prisma: PrismaService) {}
 
   async createArtist(data: Artist): Promise<Artist> {
-    const password = hashPassword(data.password);
-
     return this.prisma.artist.create({
-      data: {
-        ...data,
-        password,
-      },
+      data,
     });
   }
 
@@ -26,6 +20,14 @@ export class ArtistService {
       },
       data,
     });
+  }
+
+  async fetchArtistByEmail(email: string): Promise<Artist | null> {
+    const artist = await this.prisma.artist.findUnique({
+      where: { email },
+    });
+
+    return artist;
   }
 
   async fetchAllArtists(filters: FetchArtistsDto): Promise<{
