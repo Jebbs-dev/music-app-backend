@@ -11,6 +11,7 @@ import {
 import { SongService } from './song.service';
 import { Song } from 'generated/prisma';
 import { FetchSongsDto } from './dto/fetch-songs.dto';
+import { Public } from '../../common/decorators/public.decorator';
 
 @Controller('songs')
 export class SongController {
@@ -29,6 +30,7 @@ export class SongController {
     return this.songService.updateSong(songId, songData);
   }
 
+  @Public()
   @Get()
   async fetchAllSongs(
     @Query()

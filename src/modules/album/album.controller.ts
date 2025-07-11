@@ -11,6 +11,7 @@ import {
 import { AlbumService } from './album.service';
 import { FetchAlbumsDto } from './dto/fetch-albums.dto';
 import { Album } from 'generated/prisma';
+import { Public } from '../../common/decorators/public.decorator';
 
 @Controller('albums')
 export class AlbumController {
@@ -29,6 +30,7 @@ export class AlbumController {
     return this.albumService.updateAlbum(albumId, albumData);
   }
 
+  @Public()
   @Get()
   async fetchAllAlbums(@Query() filters: FetchAlbumsDto) {
     return this.albumService.fetchAllAlbums(filters);
