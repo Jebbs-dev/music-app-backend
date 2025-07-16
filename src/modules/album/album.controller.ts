@@ -29,11 +29,22 @@ export class AlbumController {
   ) {
     return this.albumService.updateAlbum(albumId, albumData);
   }
-
   @Public()
   @Get()
   async fetchAllAlbums(@Query() filters: FetchAlbumsDto) {
     return this.albumService.fetchAllAlbums(filters);
+  }
+
+  @Public()
+  @Get(':albumId')
+  async fetchAlbum(@Param('albumId') albumId: string) {
+    return this.albumService.fetchAlbum(albumId);
+  }
+
+  @Public()
+  @Get(':artistId')
+  async fetchAlbumsByArtist(@Param('artistId') artistId: string) {
+    return this.albumService.fetchAlbumsByArtistId(artistId);
   }
 
   @Delete()
