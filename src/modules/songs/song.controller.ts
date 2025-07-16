@@ -44,16 +44,16 @@ export class SongController {
     return this.songService.fetchSongById(songId);
   }
 
-  @Get('song/:songTitle')
+  @Get(':songTitle')
   async fetchSongByTitle(@Param('songName') songTitle: string) {
     return this.songService.fetchSongByTitle(songTitle);
   }
-  @Get('song/:artistId')
-  async fetchSongsByArtistId(@Param('artistId') artistId: string) {
+  @Get(':artistId')
+  async fetchSongsByArtist(@Param('artistId') artistId: string) {
     return this.songService.fetchSongsByArtistId(artistId);
   }
-  @Get('song/:albumId')
-  async fetchSongsByAlbumId(@Param('albumId') albumId: string) {
+  @Get(':albumId')
+  async fetchSongsByAlbum(@Param('albumId') albumId: string) {
     return this.songService.fetchSongsByAlbumId(albumId);
   }
 
