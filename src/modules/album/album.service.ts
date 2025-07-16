@@ -104,6 +104,17 @@ export class AlbumService {
     };
   }
 
+  async fetchAlbumsByArtistId(artistId: string): Promise<Album[]> {
+    return this.prisma.album.findMany({
+      where: {
+        artistId,
+      },
+      orderBy: {
+        createdAt: 'desc',
+      },
+    });
+  }
+
   async updateAlbum(
     albumId: string,
     data: Partial<Album>,
