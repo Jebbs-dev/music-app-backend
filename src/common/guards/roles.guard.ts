@@ -5,7 +5,7 @@ import { UserRole } from 'generated/prisma';
 import { Request } from 'express';
 
 interface AuthenticatedRequest extends Request {
-  user?: { roles?: string[] }; // Adjust type as needed
+  user?: { roles?: string[] };
 }
 
 @Injectable()
@@ -21,6 +21,6 @@ export class RolesGuard implements CanActivate {
       return true;
     }
     const { user } = context.switchToHttp().getRequest<AuthenticatedRequest>();
-    return requiredRoles.some((role) => user!.roles?.includes(role));
+    return requiredRoles.some((role) => user?.roles?.includes(role));
   }
 }
