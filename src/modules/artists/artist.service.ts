@@ -90,6 +90,20 @@ export class ArtistService {
           orderBy: {
             [orderField]: orderDirection,
           },
+          include: {
+            albums: {
+              select: {
+                id: true,
+                title: true,
+              },
+            },
+            songs: {
+              select: {
+                id: true,
+                title: true,
+              },
+            },
+          },
         }),
         this.prisma.artist.count({ where }),
       ]);
