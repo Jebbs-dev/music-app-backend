@@ -7,11 +7,14 @@ import {
   Param,
   Delete,
   Query,
+  UseGuards,
 } from '@nestjs/common';
 import { SongService } from './song.service';
 import { Song } from 'generated/prisma';
 import { FetchSongsDto } from './dto/fetch-songs.dto';
 import { Public } from '../../common/decorators/public.decorator';
+import { Roles } from '../../common/decorators/roles.decorator';
+import { RolesGuard } from '../../common/guards/roles.guard';
 
 @Controller('songs')
 export class SongController {
@@ -23,6 +26,8 @@ export class SongController {
   }
 
   @Patch(':songId')
+  @UseGuards(RolesGuard)
+  @Roles('ARTIST')
   async updateSong(
     @Param('songId') songId: string,
     @Body() songData: Partial<Song>,

@@ -7,11 +7,14 @@ import {
   Patch,
   Post,
   Query,
+  UseGuards,
 } from '@nestjs/common';
 import { AlbumService } from './album.service';
 import { FetchAlbumsDto } from './dto/fetch-albums.dto';
 import { Album } from 'generated/prisma';
 import { Public } from '../../common/decorators/public.decorator';
+import { Roles } from '../../common/decorators/roles.decorator';
+import { RolesGuard } from '../../common/guards/roles.guard';
 
 @Controller('albums')
 export class AlbumController {
@@ -23,6 +26,8 @@ export class AlbumController {
   }
 
   @Patch(':albumId')
+  @UseGuards(RolesGuard)
+  @Roles('ARTIST')
   async updateAlbum(
     @Param('albumId') albumId: string,
     @Body() albumData: Partial<Album>,

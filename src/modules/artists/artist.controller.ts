@@ -6,12 +6,15 @@ import {
   Patch,
   Param,
   Query,
+  UseGuards,
 } from '@nestjs/common';
 import { ArtistService } from './artist.service';
 import { Artist } from 'generated/prisma';
 import { FetchArtistsDto } from './dto/fetch-artists.dto';
 import { Public } from '../../common/decorators/public.decorator';
 import { hashPassword } from '../auth/utils/compare-password';
+import { Roles } from '../../common/decorators/roles.decorator';
+import { RolesGuard } from '../../common/guards/roles.guard';
 
 @Controller('artists')
 export class ArtistController {
@@ -26,6 +29,8 @@ export class ArtistController {
   }
 
   @Patch(':artistId')
+  @UseGuards(RolesGuard)
+  @Roles('ARTIST')
   async updateArtist(
     @Param('artistId') artistId: string,
     @Body() artistData: Partial<Artist>,
