@@ -11,6 +11,7 @@ import { APP_GUARD } from '@nestjs/core';
 import { AuthGuard } from './modules/auth/auth.guard';
 import { SetMetadata } from '@nestjs/common';
 import { AlbumModule } from './modules/album/album.module';
+import { RolesGuard } from './common/guards/roles.guard';
 
 export const IS_PUBLIC_KEY = 'isPublic';
 export const Public = () => SetMetadata(IS_PUBLIC_KEY, true);
@@ -32,6 +33,10 @@ export const Public = () => SetMetadata(IS_PUBLIC_KEY, true);
     {
       provide: APP_GUARD,
       useClass: AuthGuard,
+    },
+    {
+      provide: APP_GUARD,
+      useClass: RolesGuard,
     },
   ],
 })
