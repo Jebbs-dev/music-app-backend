@@ -76,10 +76,34 @@ export class SongService {
           orderBy: { [orderField]: orderDirection },
           include: {
             artist: {
-              select: { id: true, name: true },
+              select: {
+                id: true,
+                name: true,
+                description: true,
+                image: true,
+                albums: true,
+                songs: {
+                  select: {
+                    id: true,
+                    title: true,
+                    artist: true,
+                    coverImage: true,
+                    albumPosition: true,
+                    albumId: true,
+                    releaseDate: true,
+                  },
+                },
+              },
             }, // Include artist info
             album: {
-              select: { id: true, title: true }, // Include basic song info
+              select: {
+                id: true,
+                title: true,
+                coverImage: true,
+                releaseDate: true,
+                artist: true,
+                songs: true,
+              }, // Include basic song info
             },
           },
         }),
