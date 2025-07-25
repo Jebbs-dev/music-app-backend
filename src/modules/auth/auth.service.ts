@@ -21,12 +21,12 @@ export class AuthService {
 
     // Try to find user in User table
     let user: AuthAccount = await this.userService.fetchUserByEmail(email);
-    let type = 'user';
+    let type = 'USER';
 
     // If not found, try Artist table
     if (!user) {
       user = await this.artistService.fetchArtistByEmail(email);
-      type = 'artist';
+      type = 'ARTIST';
     }
 
     // If still not found or password doesn't match, throw
@@ -35,7 +35,22 @@ export class AuthService {
     }
 
     // Add type to payload so you know what kind of account it is
-    const payload = { sub: user.id, email: user.email, type };
+    // Type guard to check if user is User (has 'role')
+    let roles: string[];
+    if (type === 'ARTIST') {
+      roles = [
+        typeof (user as unknown as { role?: string }).role === 'string'
+          ? String((user as unknown as { role?: string }).role)
+          : 'ARTIST',
+      ];
+    } else {
+      roles = [
+        typeof (user as unknown as { role?: string }).role === 'string'
+          ? String((user as unknown as { role?: string }).role)
+          : 'USER',
+      ];
+    }
+    const payload = { sub: user.id, email: user.email, type, roles };
 
     return {
       access_token: await this.jwtService.signAsync(payload),
