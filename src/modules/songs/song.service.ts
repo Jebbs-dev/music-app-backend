@@ -163,6 +163,26 @@ export class SongService {
     });
   }
 
+  async fetchSingles(): Promise<Song[]> {
+    return this.prisma.song.findMany({
+      where: {
+        albumId: null, // No album means it's a single
+      },
+      include: {
+        artist: {
+          select: {
+            id: true,
+            name: true,
+            image: true,
+          },
+        }, // Include artist info
+      },
+      orderBy: {
+        createdAt: 'desc',
+      },
+    });
+  }
+
   async updateSong(songId: string, data: Partial<Song>): Promise<Song> {
     return this.prisma.song.update({
       where: {
