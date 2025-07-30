@@ -8,9 +8,17 @@ export class UserService {
   constructor(private prisma: PrismaService) {}
 
   async createUser(data: User): Promise<User> {
-    return this.prisma.user.create({
-      data,
+    // Replace the transaction call with a nested create on the user model
+    const user = await this.prisma.user.create({
+      data: {
+        ...data,
+        library: {
+          create: {},
+        },
+      },
     });
+
+    return user;
   }
 
   async fetchUser(userId: string): Promise<User | null> {
