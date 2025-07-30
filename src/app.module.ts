@@ -12,6 +12,8 @@ import { AuthGuard } from './modules/auth/auth.guard';
 import { SetMetadata } from '@nestjs/common';
 import { AlbumModule } from './modules/album/album.module';
 import { RolesGuard } from './common/guards/roles.guard';
+import { LibraryModule } from './modules/library/library.module';
+import { PlaylistModule } from './modules/playlist/playlist.module';
 
 export const IS_PUBLIC_KEY = 'isPublic';
 export const Public = () => SetMetadata(IS_PUBLIC_KEY, true);
@@ -26,6 +28,8 @@ export const Public = () => SetMetadata(IS_PUBLIC_KEY, true);
     ArtistModule,
     AlbumModule,
     SongModule,
+    LibraryModule,
+    PlaylistModule,
   ],
   controllers: [AppController],
   providers: [
