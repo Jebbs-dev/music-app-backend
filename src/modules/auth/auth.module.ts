@@ -5,18 +5,21 @@ import { JwtModule } from '@nestjs/jwt';
 import { AuthController } from './auth.controller';
 import { jwtConstants } from './constants/constants';
 import { ArtistModule } from '../artists/artist.module';
+import { PrismaModule } from 'src/prisma/prisma.module';
 
 @Module({
   imports: [
     UserModule,
     ArtistModule,
+    PrismaModule,
     JwtModule.register({
-      global: true,
-      secret: jwtConstants.secret,
-      signOptions: { expiresIn: '1d' },
+      global: true, // Make JwtModule available globally
+      secret: jwtConstants.accessTokenSecret, // Default secret for access tokens
+      signOptions: { expiresIn: jwtConstants.accessTokenExpiresIn },
     }),
   ],
   providers: [AuthService],
   controllers: [AuthController],
+  exports: [AuthService],
 })
 export class AuthModule {}
