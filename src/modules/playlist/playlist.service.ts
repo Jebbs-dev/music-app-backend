@@ -33,6 +33,16 @@ export class PlaylistService {
     });
   }
 
+  async getPublicPlaylists(): Promise<Playlist[]> {
+    return this.prisma.playlist.findMany({
+      where: { isPublic: true },
+      include: {
+        songs: true,
+        albums: true,
+      },
+    });
+  }
+
   async addSongToPlaylist(
     playlistId: string,
     songId: string,
