@@ -11,6 +11,7 @@ import { PlaylistService } from './playlist.service';
 import { CreatePlaylistDto } from './dto/create-playlist.dto';
 import { RolesGuard } from 'src/common/guards/roles.guard';
 import { Roles } from 'src/common/decorators/roles.decorator';
+import { Public } from '../../common/decorators/public.decorator';
 
 @Controller('playlists')
 export class PlaylistController {
@@ -18,7 +19,7 @@ export class PlaylistController {
 
   @UseGuards(RolesGuard)
   @Roles('USER')
-  @Post('create')
+  @Post()
   async createPlaylist(@Body() data: CreatePlaylistDto) {
     return this.playlistService.createPlaylist(data);
   }
@@ -48,6 +49,12 @@ export class PlaylistController {
   @Get('user/:userId')
   async getPlaylists(@Param('userId') userId: string) {
     return this.playlistService.getPlaylists(userId);
+  }
+
+  @Public()
+  @Get()
+  async getPublicPlaylists() {
+    return this.playlistService.getPublicPlaylists();
   }
 
   @UseGuards(RolesGuard)
