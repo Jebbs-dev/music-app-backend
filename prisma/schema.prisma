@@ -133,6 +133,7 @@ model Playlist {
   id        String   @id @default(uuid())
   name      String
   userId    String
+  description String?
   isPublic  Boolean  @default(false)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -172,8 +173,6 @@ model PlaylistAlbum {
   // Relations
   album     Album     @relation(fields: [albumId], references: [id], onDelete: Cascade)
   playlist  Playlist  @relation(fields: [playlistId], references: [id], onDelete: Cascade)
-  library   Library   @relation(fields: [libraryId], references: [id], onDelete: Cascade)
-  libraryId String
 
   @@unique([playlistId, albumId])
   @@index([playlistId])
@@ -191,7 +190,6 @@ model Library {
 
   @@unique([userId])
   @@index([userId])
-  PlaylistAlbum PlaylistAlbum[]
 }
 
 // Simplified Library Structure - Direct user relations
