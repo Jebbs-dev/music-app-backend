@@ -51,6 +51,13 @@ export class PlaylistController {
     return this.playlistService.getPlaylists(userId);
   }
 
+  @UseGuards(RolesGuard)
+  @Roles('USER')
+  @Get(':playlistId')
+  async getPlaylistById(@Param('playlistId') playlistId: string) {
+    return this.playlistService.getPlaylistById(playlistId);
+  }
+
   @Public()
   @Get()
   async getPublicPlaylists() {
