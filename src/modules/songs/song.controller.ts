@@ -50,6 +50,12 @@ export class SongController {
     return this.songService.fetchSingles();
   }
 
+  @Public()
+  @Get('album-songs')
+  async fetchAlbumSongs() {
+    return this.songService.fetchAlbumSongs();
+  }
+
   @Get(':songId')
   async fetchSongById(@Param('songId') songId: string) {
     return this.songService.fetchSongById(songId);

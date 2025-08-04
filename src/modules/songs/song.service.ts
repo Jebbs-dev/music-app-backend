@@ -183,6 +183,34 @@ export class SongService {
     });
   }
 
+  async fetchAlbumSongs(): Promise<Song[]> {
+    return this.prisma.song.findMany({
+      where: {
+        albumId: { not: null }, // Songs that belong to an album
+      },
+      include: {
+        artist: {
+          select: {
+            id: true,
+            name: true,
+            image: true,
+          },
+        },
+        album: {
+          select: {
+            id: true,
+            title: true,
+            coverImage: true,
+            releaseDate: true,
+          },
+        }, // Include album info
+      },
+      orderBy: {
+        createdAt: 'desc',
+      },
+    });
+  }
+
   async updateSong(songId: string, data: Partial<Song>): Promise<Song> {
     return this.prisma.song.update({
       where: {
