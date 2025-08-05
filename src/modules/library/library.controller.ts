@@ -5,7 +5,7 @@ import { LibraryService } from './library.service';
 export class LibraryController {
   constructor(private readonly libraryService: LibraryService) {}
 
-  @Post(':userId/:albumId')
+  @Post(':userId/album/:albumId')
   async addAlbumToLibrary(
     @Param('userId') userId: string,
     @Param('albumId') albumId: string,
@@ -13,7 +13,7 @@ export class LibraryController {
     return this.libraryService.addAlbumToLibrary(userId, albumId);
   }
 
-  @Post(':userId/:songId')
+  @Post(':userId/song/:songId')
   async addSongToLibrary(
     @Param('userId') userId: string,
     @Param('songId') songId: string,
