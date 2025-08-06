@@ -36,6 +36,7 @@ export class AuthGuard implements CanActivate {
 
     const request: Request = context.switchToHttp().getRequest<Request>();
     const token = this.extractTokenFromHeader(request);
+
     if (!token) {
       throw new UnauthorizedException('No token provided');
     }
@@ -52,7 +53,12 @@ export class AuthGuard implements CanActivate {
 
       // 💡 We're assigning the payload to the request object here
       // so that we can access it in our route handlers
-      request['user'] = payload;
+      request['user'] = {
+        userId: payload.sub,
+        email: payload.email,
+        type: payload.type,
+        roles: payload.roles,
+      };
     } catch {
       throw new UnauthorizedException('Invalid token');
     }
