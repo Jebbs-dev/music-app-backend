@@ -6,12 +6,14 @@ import { AuthController } from './auth.controller';
 import { jwtConstants } from './constants/constants';
 import { ArtistModule } from '../artists/artist.module';
 import { PrismaModule } from 'src/prisma/prisma.module';
+import { TokenModule } from './token/token.module';
 
 @Module({
   imports: [
     UserModule,
     ArtistModule,
     PrismaModule,
+    TokenModule,
     JwtModule.register({
       global: true, // Make JwtModule available globally
       secret: jwtConstants.accessTokenSecret, // Default secret for access tokens
