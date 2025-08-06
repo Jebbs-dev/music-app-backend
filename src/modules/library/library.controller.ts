@@ -21,13 +21,13 @@ export class LibraryController {
     return this.libraryService.addSongToLibrary(userId, songId);
   }
 
-  @Post(':userId/:playlistId')
-  async addPlaylistToLibrary(
-    @Param('userId') userId: string,
-    @Param('playlistId') playlistId: string,
-  ) {
-    return this.libraryService.addPlaylistToLibrary(userId, playlistId);
-  }
+  // @Post(':userId/:playlistId')
+  // async addPlaylistToLibrary(
+  //   @Param('userId') userId: string,
+  //   @Param('playlistId') playlistId: string,
+  // ) {
+  //   return this.libraryService.addPlaylistToLibrary(userId, playlistId);
+  // }
 
   @Get('user/:userId')
   async fetchLibrary(@Param('userId') userId: string) {
