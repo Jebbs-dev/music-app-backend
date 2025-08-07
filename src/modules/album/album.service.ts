@@ -84,18 +84,9 @@ export class AlbumService {
         },
         include: {
           artist: {
-            select: { id: true, name: true, image: true },
-          }, // Include artist info
-          songs: {
-            select: {
-              id: true,
-              title: true,
-              coverImage: true,
-              releaseDate: true,
-              albumPosition: true,
-              artist: true,
-            }, // Include basic song info
+            select: { id: true, name: true },
           },
+          songs: true,
         },
       }),
       this.prisma.album.count({ where }),

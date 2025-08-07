@@ -95,18 +95,12 @@ export class ArtistService {
               select: {
                 id: true,
                 title: true,
-                artist: true,
-                releaseDate: true,
-                coverImage: true,
               },
             },
             songs: {
               select: {
                 id: true,
                 title: true,
-                artist: true,
-                releaseDate: true,
-                coverImage: true,
               },
             },
           },
