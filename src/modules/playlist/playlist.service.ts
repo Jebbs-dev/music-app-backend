@@ -65,13 +65,12 @@ export class PlaylistService {
     // Get song with artist
     const song = await this.prisma.song.findUnique({
       where: { id: songId },
-      include: { artist: true },
+      include: { artist: { select: { id: true } } },
     });
 
     if (!song) {
       throw new Error('Song not found');
     }
-
     // Get playlist
     const playlist = await this.prisma.playlist.findUnique({
       where: { id: playlistId },
@@ -128,7 +127,7 @@ export class PlaylistService {
     });
 
     // Return the updated playlist
-    return this.prisma.playlist.findUnique({
+    return this.prisma.playlist.findUniqueOrThrow({
       where: { id: playlistId },
       include: {
         songs: true,
