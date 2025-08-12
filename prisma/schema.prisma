@@ -36,7 +36,7 @@ model User {
   LibraryArtist LibraryArtist[]
   LibraryAlbum  LibraryAlbum[]
   LibrarySong   LibrarySong[]
-  tokens         Token[]
+  tokens        Token[]
 
   @@index([email])
   @@index([role])
@@ -50,7 +50,7 @@ model Artist {
   description String?
   group       String?
   image       String?
-  subscribers Int         @default(0) // Number of subscribers/followers
+  subscribers Int          @default(0) // Number of subscribers/followers
   status      ArtistStatus @default(ACTIVE)
   createdAt   DateTime     @default(now())
   updatedAt   DateTime     @updatedAt
@@ -60,7 +60,7 @@ model Artist {
   albums         Album[]
   songs          Song[]
   libraryArtists LibraryArtist[]
-  tokens          Token[]
+  tokens         Token[]
 
   @@index([name, email])
   @@index([status])
@@ -96,7 +96,7 @@ model Song {
   lyrics        String?
   coverImage    String?
   releaseDate   DateTime?
-  playCount     Int     @default(0) // Count of how many times the song has been played
+  playCount     Int       @default(0) // Count of how many times the song has been played
   albumPosition Int? // Order of songs in album, if applicable
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
@@ -130,13 +130,13 @@ model Favourite {
 }
 
 model Playlist {
-  id        String   @id @default(uuid())
-  name      String
-  userId    String
+  id          String   @id @default(uuid())
+  name        String
+  userId      String
   description String?
-  isPublic  Boolean  @default(false)
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  isPublic    Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
 
   // Relations
   user      User            @relation(fields: [userId], references: [id], onDelete: Cascade)
@@ -146,6 +146,7 @@ model Playlist {
   libraryId String
 
   @@index([userId])
+  @@index([libraryId])
   @@index([isPublic])
 }
 
@@ -171,8 +172,8 @@ model PlaylistAlbum {
   addedAt    DateTime @default(now())
 
   // Relations
-  album     Album     @relation(fields: [albumId], references: [id], onDelete: Cascade)
-  playlist  Playlist  @relation(fields: [playlistId], references: [id], onDelete: Cascade)
+  album    Album    @relation(fields: [albumId], references: [id], onDelete: Cascade)
+  playlist Playlist @relation(fields: [playlistId], references: [id], onDelete: Cascade)
 
   @@unique([playlistId, albumId])
   @@index([playlistId])
